@@ -1,0 +1,2129 @@
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (2.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (1.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateSearches (20110905125807)
+  [1m[35m (0.6ms)[0m  CREATE TABLE "searches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "query" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110905125807')[0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("searches")
+  [1m[36m (23.5ms)[0m  [1mDELETE FROM "searches";[0m
+  [1m[35mSQL (99.0ms)[0m  INSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 05 Sep 2011 13:18:28 UTC +00:00], ["query", "query 1"], ["updated_at", Mon, 05 Sep 2011 13:18:28 UTC +00:00]]
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:18:28 UTC +00:00], ["query", "query 2"], ["updated_at", Mon, 05 Sep 2011 13:18:28 UTC +00:00]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 05 Sep 2011 13:18:28 UTC +00:00], ["query", "query 3"], ["updated_at", Mon, 05 Sep 2011 13:18:28 UTC +00:00]]
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:18:28 UTC +00:00], ["query", "query 4"], ["updated_at", Mon, 05 Sep 2011 13:18:28 UTC +00:00]]
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 05 Sep 2011 13:18:28 UTC +00:00], ["query", "query 5"], ["updated_at", Mon, 05 Sep 2011 13:18:28 UTC +00:00]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:18:28 UTC +00:00], ["query", "query 6"], ["updated_at", Mon, 05 Sep 2011 13:18:28 UTC +00:00]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 05 Sep 2011 13:18:28 UTC +00:00], ["query", "query 7"], ["updated_at", Mon, 05 Sep 2011 13:18:28 UTC +00:00]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:18:28 UTC +00:00], ["query", "query 8"], ["updated_at", Mon, 05 Sep 2011 13:18:28 UTC +00:00]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 05 Sep 2011 13:18:28 UTC +00:00], ["query", "query 9"], ["updated_at", Mon, 05 Sep 2011 13:18:28 UTC +00:00]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:18:28 UTC +00:00], ["query", "query 10"], ["updated_at", Mon, 05 Sep 2011 13:18:28 UTC +00:00]]
+  [1m[35m (1.4ms)[0m  DELETE FROM "searches";
+  [1m[36m (1.5ms)[0m  [1mDELETE FROM "searches";[0m
+  [1m[36m (3.9ms)[0m  [1mDELETE FROM "searches";[0m
+  [1m[35mSQL (27.6ms)[0m  INSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 05 Sep 2011 13:18:53 UTC +00:00], ["query", "query 1"], ["updated_at", Mon, 05 Sep 2011 13:18:53 UTC +00:00]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:18:53 UTC +00:00], ["query", "query 2"], ["updated_at", Mon, 05 Sep 2011 13:18:53 UTC +00:00]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 05 Sep 2011 13:18:53 UTC +00:00], ["query", "query 3"], ["updated_at", Mon, 05 Sep 2011 13:18:53 UTC +00:00]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:18:53 UTC +00:00], ["query", "query 4"], ["updated_at", Mon, 05 Sep 2011 13:18:53 UTC +00:00]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 05 Sep 2011 13:18:53 UTC +00:00], ["query", "query 5"], ["updated_at", Mon, 05 Sep 2011 13:18:53 UTC +00:00]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:18:53 UTC +00:00], ["query", "query 6"], ["updated_at", Mon, 05 Sep 2011 13:18:53 UTC +00:00]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 05 Sep 2011 13:18:53 UTC +00:00], ["query", "query 7"], ["updated_at", Mon, 05 Sep 2011 13:18:53 UTC +00:00]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:18:53 UTC +00:00], ["query", "query 8"], ["updated_at", Mon, 05 Sep 2011 13:18:53 UTC +00:00]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 05 Sep 2011 13:18:53 UTC +00:00], ["query", "query 9"], ["updated_at", Mon, 05 Sep 2011 13:18:53 UTC +00:00]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:18:53 UTC +00:00], ["query", "query 10"], ["updated_at", Mon, 05 Sep 2011 13:18:53 UTC +00:00]]
+  [1m[35m (1.3ms)[0m  DELETE FROM "searches";
+  [1m[36m (1.6ms)[0m  [1mDELETE FROM "searches";[0m
+  [1m[36m (2.2ms)[0m  [1mDELETE FROM "searches";[0m
+  [1m[35mSQL (27.7ms)[0m  INSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 05 Sep 2011 13:19:31 UTC +00:00], ["query", "query 1"], ["updated_at", Mon, 05 Sep 2011 13:19:31 UTC +00:00]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:19:31 UTC +00:00], ["query", "query 2"], ["updated_at", Mon, 05 Sep 2011 13:19:31 UTC +00:00]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 05 Sep 2011 13:19:31 UTC +00:00], ["query", "query 3"], ["updated_at", Mon, 05 Sep 2011 13:19:31 UTC +00:00]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:19:31 UTC +00:00], ["query", "query 4"], ["updated_at", Mon, 05 Sep 2011 13:19:31 UTC +00:00]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 05 Sep 2011 13:19:31 UTC +00:00], ["query", "query 5"], ["updated_at", Mon, 05 Sep 2011 13:19:31 UTC +00:00]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:19:31 UTC +00:00], ["query", "query 6"], ["updated_at", Mon, 05 Sep 2011 13:19:31 UTC +00:00]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 05 Sep 2011 13:19:31 UTC +00:00], ["query", "query 7"], ["updated_at", Mon, 05 Sep 2011 13:19:31 UTC +00:00]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:19:31 UTC +00:00], ["query", "query 8"], ["updated_at", Mon, 05 Sep 2011 13:19:31 UTC +00:00]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 05 Sep 2011 13:19:31 UTC +00:00], ["query", "query 9"], ["updated_at", Mon, 05 Sep 2011 13:19:31 UTC +00:00]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:19:31 UTC +00:00], ["query", "query 10"], ["updated_at", Mon, 05 Sep 2011 13:19:31 UTC +00:00]]
+  [1m[35m (1.4ms)[0m  DELETE FROM "searches";
+  [1m[36m (1.4ms)[0m  [1mDELETE FROM "searches";[0m
+  [1m[36m (1.5ms)[0m  [1mDELETE FROM "searches";[0m
+  [1m[35mSQL (27.4ms)[0m  INSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 05 Sep 2011 13:22:29 UTC +00:00], ["query", "query 1"], ["updated_at", Mon, 05 Sep 2011 13:22:29 UTC +00:00]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:22:29 UTC +00:00], ["query", "query 2"], ["updated_at", Mon, 05 Sep 2011 13:22:29 UTC +00:00]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 05 Sep 2011 13:22:29 UTC +00:00], ["query", "query 3"], ["updated_at", Mon, 05 Sep 2011 13:22:29 UTC +00:00]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:22:29 UTC +00:00], ["query", "query 4"], ["updated_at", Mon, 05 Sep 2011 13:22:29 UTC +00:00]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 05 Sep 2011 13:22:29 UTC +00:00], ["query", "query 5"], ["updated_at", Mon, 05 Sep 2011 13:22:29 UTC +00:00]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:22:29 UTC +00:00], ["query", "query 6"], ["updated_at", Mon, 05 Sep 2011 13:22:29 UTC +00:00]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 05 Sep 2011 13:22:29 UTC +00:00], ["query", "query 7"], ["updated_at", Mon, 05 Sep 2011 13:22:29 UTC +00:00]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:22:29 UTC +00:00], ["query", "query 8"], ["updated_at", Mon, 05 Sep 2011 13:22:29 UTC +00:00]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 05 Sep 2011 13:22:29 UTC +00:00], ["query", "query 9"], ["updated_at", Mon, 05 Sep 2011 13:22:29 UTC +00:00]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:22:29 UTC +00:00], ["query", "query 10"], ["updated_at", Mon, 05 Sep 2011 13:22:29 UTC +00:00]]
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:22:30 +0200
+  Processing by SearchesController#index as HTML
+Rendered searches/index.html.slim within layouts/application (74.2ms)
+Completed 200 OK in 182ms (Views: 181.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (1.3ms)[0m  DELETE FROM "searches";
+  [1m[36m (1.6ms)[0m  [1mDELETE FROM "searches";[0m
+  [1m[36m (1.8ms)[0m  [1mDELETE FROM "searches";[0m
+  [1m[35mSQL (32.0ms)[0m  INSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 05 Sep 2011 13:22:46 UTC +00:00], ["query", "query 1"], ["updated_at", Mon, 05 Sep 2011 13:22:46 UTC +00:00]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:22:46 UTC +00:00], ["query", "query 2"], ["updated_at", Mon, 05 Sep 2011 13:22:46 UTC +00:00]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 05 Sep 2011 13:22:46 UTC +00:00], ["query", "query 3"], ["updated_at", Mon, 05 Sep 2011 13:22:46 UTC +00:00]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:22:46 UTC +00:00], ["query", "query 4"], ["updated_at", Mon, 05 Sep 2011 13:22:46 UTC +00:00]]
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 05 Sep 2011 13:22:46 UTC +00:00], ["query", "query 5"], ["updated_at", Mon, 05 Sep 2011 13:22:46 UTC +00:00]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:22:46 UTC +00:00], ["query", "query 6"], ["updated_at", Mon, 05 Sep 2011 13:22:46 UTC +00:00]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 05 Sep 2011 13:22:46 UTC +00:00], ["query", "query 7"], ["updated_at", Mon, 05 Sep 2011 13:22:46 UTC +00:00]]
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:22:46 UTC +00:00], ["query", "query 8"], ["updated_at", Mon, 05 Sep 2011 13:22:46 UTC +00:00]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 05 Sep 2011 13:22:46 UTC +00:00], ["query", "query 9"], ["updated_at", Mon, 05 Sep 2011 13:22:46 UTC +00:00]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:22:46 UTC +00:00], ["query", "query 10"], ["updated_at", Mon, 05 Sep 2011 13:22:46 UTC +00:00]]
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:22:47 +0200
+  Processing by SearchesController#index as HTML
+Rendered searches/index.html.slim within layouts/application (23.8ms)
+Completed 200 OK in 132ms (Views: 131.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (2.5ms)[0m  DELETE FROM "searches";
+  [1m[36m (1.7ms)[0m  [1mDELETE FROM "searches";[0m
+  [1m[36m (1.8ms)[0m  [1mDELETE FROM "searches";[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 1' LIMIT 1
+  [1m[36mSQL (42.0ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:27:43 UTC +00:00], ["query", "query 1"], ["updated_at", Mon, 05 Sep 2011 13:27:43 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 2' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:27:43 UTC +00:00], ["query", "query 2"], ["updated_at", Mon, 05 Sep 2011 13:27:43 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 3' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:27:43 UTC +00:00], ["query", "query 3"], ["updated_at", Mon, 05 Sep 2011 13:27:43 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 4' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:27:43 UTC +00:00], ["query", "query 4"], ["updated_at", Mon, 05 Sep 2011 13:27:43 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 5' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:27:43 UTC +00:00], ["query", "query 5"], ["updated_at", Mon, 05 Sep 2011 13:27:43 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 6' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:27:43 UTC +00:00], ["query", "query 6"], ["updated_at", Mon, 05 Sep 2011 13:27:43 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 7' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:27:43 UTC +00:00], ["query", "query 7"], ["updated_at", Mon, 05 Sep 2011 13:27:43 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 8' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:27:43 UTC +00:00], ["query", "query 8"], ["updated_at", Mon, 05 Sep 2011 13:27:43 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 9' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:27:43 UTC +00:00], ["query", "query 9"], ["updated_at", Mon, 05 Sep 2011 13:27:43 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 10' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:27:43 UTC +00:00], ["query", "query 10"], ["updated_at", Mon, 05 Sep 2011 13:27:43 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 11' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:27:43 UTC +00:00], ["query", "query 11"], ["updated_at", Mon, 05 Sep 2011 13:27:43 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 12' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:27:43 UTC +00:00], ["query", "query 12"], ["updated_at", Mon, 05 Sep 2011 13:27:43 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 13' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:27:43 UTC +00:00], ["query", "query 13"], ["updated_at", Mon, 05 Sep 2011 13:27:43 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 14' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:27:43 UTC +00:00], ["query", "query 14"], ["updated_at", Mon, 05 Sep 2011 13:27:43 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 15' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:27:43 UTC +00:00], ["query", "query 15"], ["updated_at", Mon, 05 Sep 2011 13:27:43 UTC +00:00]]
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:27:44 +0200
+  Processing by SearchesController#index as HTML
+Rendered searches/index.html.slim within layouts/application (32.5ms)
+Completed 200 OK in 154ms (Views: 152.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (1.8ms)[0m  DELETE FROM "searches";
+  [1m[36m (1.6ms)[0m  [1mDELETE FROM "searches";[0m
+  [1m[36m (1.9ms)[0m  [1mDELETE FROM "searches";[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 1' LIMIT 1
+  [1m[36mSQL (12.9ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:30:32 UTC +00:00], ["query", "query 1"], ["updated_at", Mon, 05 Sep 2011 13:30:32 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 2' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:30:32 UTC +00:00], ["query", "query 2"], ["updated_at", Mon, 05 Sep 2011 13:30:32 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 3' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:30:32 UTC +00:00], ["query", "query 3"], ["updated_at", Mon, 05 Sep 2011 13:30:32 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 4' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:30:32 UTC +00:00], ["query", "query 4"], ["updated_at", Mon, 05 Sep 2011 13:30:32 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 5' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:30:32 UTC +00:00], ["query", "query 5"], ["updated_at", Mon, 05 Sep 2011 13:30:32 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 6' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:30:32 UTC +00:00], ["query", "query 6"], ["updated_at", Mon, 05 Sep 2011 13:30:32 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 7' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:30:32 UTC +00:00], ["query", "query 7"], ["updated_at", Mon, 05 Sep 2011 13:30:32 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 8' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:30:32 UTC +00:00], ["query", "query 8"], ["updated_at", Mon, 05 Sep 2011 13:30:32 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 9' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:30:32 UTC +00:00], ["query", "query 9"], ["updated_at", Mon, 05 Sep 2011 13:30:32 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 10' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:30:32 UTC +00:00], ["query", "query 10"], ["updated_at", Mon, 05 Sep 2011 13:30:32 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 11' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:30:32 UTC +00:00], ["query", "query 11"], ["updated_at", Mon, 05 Sep 2011 13:30:32 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 12' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:30:32 UTC +00:00], ["query", "query 12"], ["updated_at", Mon, 05 Sep 2011 13:30:32 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 13' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:30:32 UTC +00:00], ["query", "query 13"], ["updated_at", Mon, 05 Sep 2011 13:30:32 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 14' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:30:32 UTC +00:00], ["query", "query 14"], ["updated_at", Mon, 05 Sep 2011 13:30:32 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 15' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:30:32 UTC +00:00], ["query", "query 15"], ["updated_at", Mon, 05 Sep 2011 13:30:32 UTC +00:00]]
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:30:32 +0200
+  Processing by SearchesController#index as HTML
+  [1m[35mSearch Load (0.3ms)[0m  SELECT "searches".* FROM "searches" LIMIT 10 OFFSET 0
+Rendered searches/index.html.slim within layouts/application (43.1ms)
+Completed 200 OK in 162ms (Views: 160.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (1.5ms)[0m  [1mDELETE FROM "searches";[0m
+  [1m[35m (1.6ms)[0m  DELETE FROM "searches";
+  [1m[36m (2.0ms)[0m  [1mDELETE FROM "searches";[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 1' LIMIT 1
+  [1m[36mSQL (6.5ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:30:52 UTC +00:00], ["query", "query 1"], ["updated_at", Mon, 05 Sep 2011 13:30:52 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 2' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:30:52 UTC +00:00], ["query", "query 2"], ["updated_at", Mon, 05 Sep 2011 13:30:52 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 3' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:30:52 UTC +00:00], ["query", "query 3"], ["updated_at", Mon, 05 Sep 2011 13:30:52 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 4' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:30:52 UTC +00:00], ["query", "query 4"], ["updated_at", Mon, 05 Sep 2011 13:30:52 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 5' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:30:52 UTC +00:00], ["query", "query 5"], ["updated_at", Mon, 05 Sep 2011 13:30:52 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 6' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:30:52 UTC +00:00], ["query", "query 6"], ["updated_at", Mon, 05 Sep 2011 13:30:52 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 7' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:30:52 UTC +00:00], ["query", "query 7"], ["updated_at", Mon, 05 Sep 2011 13:30:52 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 8' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:30:52 UTC +00:00], ["query", "query 8"], ["updated_at", Mon, 05 Sep 2011 13:30:52 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 9' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:30:52 UTC +00:00], ["query", "query 9"], ["updated_at", Mon, 05 Sep 2011 13:30:52 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 10' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:30:52 UTC +00:00], ["query", "query 10"], ["updated_at", Mon, 05 Sep 2011 13:30:52 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 11' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:30:52 UTC +00:00], ["query", "query 11"], ["updated_at", Mon, 05 Sep 2011 13:30:52 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 12' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:30:52 UTC +00:00], ["query", "query 12"], ["updated_at", Mon, 05 Sep 2011 13:30:52 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 13' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:30:52 UTC +00:00], ["query", "query 13"], ["updated_at", Mon, 05 Sep 2011 13:30:52 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 14' LIMIT 1
+  [1m[36mSQL (6.0ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:30:52 UTC +00:00], ["query", "query 14"], ["updated_at", Mon, 05 Sep 2011 13:30:52 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 15' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:30:52 UTC +00:00], ["query", "query 15"], ["updated_at", Mon, 05 Sep 2011 13:30:52 UTC +00:00]]
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:30:52 +0200
+  Processing by SearchesController#index as HTML
+  [1m[35mSearch Load (0.3ms)[0m  SELECT "searches".* FROM "searches" LIMIT 10 OFFSET 0
+Rendered searches/index.html.slim within layouts/application (71.4ms)
+Completed 200 OK in 205ms (Views: 203.3ms | ActiveRecord: 0.3ms)
+  [1m[36m (96.1ms)[0m  [1mDELETE FROM "searches";[0m
+  [1m[35m (128.5ms)[0m  DELETE FROM "searches";
+  [1m[36m (1.5ms)[0m  [1mDELETE FROM "searches";[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 1' LIMIT 1
+  [1m[36mSQL (55.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:45:22 UTC +00:00], ["query", "query 1"], ["updated_at", Mon, 05 Sep 2011 13:45:22 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 2' LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:45:22 UTC +00:00], ["query", "query 2"], ["updated_at", Mon, 05 Sep 2011 13:45:22 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 3' LIMIT 1
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:45:22 UTC +00:00], ["query", "query 3"], ["updated_at", Mon, 05 Sep 2011 13:45:22 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 4' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:45:22 UTC +00:00], ["query", "query 4"], ["updated_at", Mon, 05 Sep 2011 13:45:22 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 5' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:45:22 UTC +00:00], ["query", "query 5"], ["updated_at", Mon, 05 Sep 2011 13:45:22 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 6' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:45:22 UTC +00:00], ["query", "query 6"], ["updated_at", Mon, 05 Sep 2011 13:45:22 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 7' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:45:22 UTC +00:00], ["query", "query 7"], ["updated_at", Mon, 05 Sep 2011 13:45:22 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 8' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:45:22 UTC +00:00], ["query", "query 8"], ["updated_at", Mon, 05 Sep 2011 13:45:22 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 9' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:45:22 UTC +00:00], ["query", "query 9"], ["updated_at", Mon, 05 Sep 2011 13:45:22 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 10' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:45:22 UTC +00:00], ["query", "query 10"], ["updated_at", Mon, 05 Sep 2011 13:45:22 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 11' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:45:22 UTC +00:00], ["query", "query 11"], ["updated_at", Mon, 05 Sep 2011 13:45:22 UTC +00:00]]
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 12' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:45:22 UTC +00:00], ["query", "query 12"], ["updated_at", Mon, 05 Sep 2011 13:45:22 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 13' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:45:22 UTC +00:00], ["query", "query 13"], ["updated_at", Mon, 05 Sep 2011 13:45:22 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 14' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:45:22 UTC +00:00], ["query", "query 14"], ["updated_at", Mon, 05 Sep 2011 13:45:22 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 15' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:45:22 UTC +00:00], ["query", "query 15"], ["updated_at", Mon, 05 Sep 2011 13:45:22 UTC +00:00]]
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:45:23 +0200
+  Processing by SearchesController#index as HTML
+  [1m[35mSearch Load (0.3ms)[0m  SELECT "searches".* FROM "searches" LIMIT 10 OFFSET 0
+Rendered searches/index.html.slim within layouts/application (96.9ms)
+Completed 200 OK in 188ms (Views: 185.8ms | ActiveRecord: 0.3ms)
+  [1m[36m (1.8ms)[0m  [1mDELETE FROM "searches";[0m
+  [1m[35m (1.4ms)[0m  DELETE FROM "searches";
+  [1m[36m (2.2ms)[0m  [1mDELETE FROM "searches";[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 1' LIMIT 1
+  [1m[36mSQL (6.5ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:45:49 UTC +00:00], ["query", "query 1"], ["updated_at", Mon, 05 Sep 2011 13:45:49 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 2' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:45:49 UTC +00:00], ["query", "query 2"], ["updated_at", Mon, 05 Sep 2011 13:45:49 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 3' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:45:49 UTC +00:00], ["query", "query 3"], ["updated_at", Mon, 05 Sep 2011 13:45:49 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 4' LIMIT 1
+  [1m[36mSQL (30.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:45:49 UTC +00:00], ["query", "query 4"], ["updated_at", Mon, 05 Sep 2011 13:45:49 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 5' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:45:49 UTC +00:00], ["query", "query 5"], ["updated_at", Mon, 05 Sep 2011 13:45:49 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 6' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:45:49 UTC +00:00], ["query", "query 6"], ["updated_at", Mon, 05 Sep 2011 13:45:49 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 7' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:45:49 UTC +00:00], ["query", "query 7"], ["updated_at", Mon, 05 Sep 2011 13:45:49 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 8' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:45:49 UTC +00:00], ["query", "query 8"], ["updated_at", Mon, 05 Sep 2011 13:45:49 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 9' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:45:49 UTC +00:00], ["query", "query 9"], ["updated_at", Mon, 05 Sep 2011 13:45:49 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 10' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:45:49 UTC +00:00], ["query", "query 10"], ["updated_at", Mon, 05 Sep 2011 13:45:49 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 11' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:45:49 UTC +00:00], ["query", "query 11"], ["updated_at", Mon, 05 Sep 2011 13:45:49 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 12' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:45:49 UTC +00:00], ["query", "query 12"], ["updated_at", Mon, 05 Sep 2011 13:45:49 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 13' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:45:49 UTC +00:00], ["query", "query 13"], ["updated_at", Mon, 05 Sep 2011 13:45:49 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 14' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:45:49 UTC +00:00], ["query", "query 14"], ["updated_at", Mon, 05 Sep 2011 13:45:49 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 15' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:45:49 UTC +00:00], ["query", "query 15"], ["updated_at", Mon, 05 Sep 2011 13:45:49 UTC +00:00]]
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:45:50 +0200
+  Processing by SearchesController#index as HTML
+  [1m[35mSearch Load (0.3ms)[0m  SELECT "searches".* FROM "searches" LIMIT 10 OFFSET 0
+Rendered searches/index.html.slim within layouts/application (190.0ms)
+Completed 500 Internal Server Error in 277ms
+  [1m[36m (1.5ms)[0m  [1mDELETE FROM "searches";[0m
+  [1m[35m (1.7ms)[0m  DELETE FROM "searches";
+  [1m[36m (2.8ms)[0m  [1mDELETE FROM "searches";[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 1' LIMIT 1
+  [1m[36mSQL (6.5ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:46:02 UTC +00:00], ["query", "query 1"], ["updated_at", Mon, 05 Sep 2011 13:46:02 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 2' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:46:02 UTC +00:00], ["query", "query 2"], ["updated_at", Mon, 05 Sep 2011 13:46:02 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 3' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:46:02 UTC +00:00], ["query", "query 3"], ["updated_at", Mon, 05 Sep 2011 13:46:02 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 4' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:46:02 UTC +00:00], ["query", "query 4"], ["updated_at", Mon, 05 Sep 2011 13:46:02 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 5' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:46:02 UTC +00:00], ["query", "query 5"], ["updated_at", Mon, 05 Sep 2011 13:46:02 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 6' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:46:02 UTC +00:00], ["query", "query 6"], ["updated_at", Mon, 05 Sep 2011 13:46:02 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 7' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:46:02 UTC +00:00], ["query", "query 7"], ["updated_at", Mon, 05 Sep 2011 13:46:02 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 8' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:46:02 UTC +00:00], ["query", "query 8"], ["updated_at", Mon, 05 Sep 2011 13:46:02 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 9' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:46:02 UTC +00:00], ["query", "query 9"], ["updated_at", Mon, 05 Sep 2011 13:46:02 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 10' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:46:02 UTC +00:00], ["query", "query 10"], ["updated_at", Mon, 05 Sep 2011 13:46:02 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 11' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:46:02 UTC +00:00], ["query", "query 11"], ["updated_at", Mon, 05 Sep 2011 13:46:02 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 12' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:46:02 UTC +00:00], ["query", "query 12"], ["updated_at", Mon, 05 Sep 2011 13:46:02 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 13' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:46:02 UTC +00:00], ["query", "query 13"], ["updated_at", Mon, 05 Sep 2011 13:46:02 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 14' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:46:02 UTC +00:00], ["query", "query 14"], ["updated_at", Mon, 05 Sep 2011 13:46:02 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 15' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:46:02 UTC +00:00], ["query", "query 15"], ["updated_at", Mon, 05 Sep 2011 13:46:02 UTC +00:00]]
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:46:02 +0200
+  Processing by SearchesController#index as HTML
+  [1m[35mSearch Load (0.3ms)[0m  SELECT "searches".* FROM "searches" LIMIT 10 OFFSET 0
+Rendered searches/index.html.slim within layouts/application (77.6ms)
+Completed 200 OK in 164ms (Views: 162.2ms | ActiveRecord: 0.3ms)
+  [1m[36m (1.6ms)[0m  [1mDELETE FROM "searches";[0m
+  [1m[35m (1.4ms)[0m  DELETE FROM "searches";
+  [1m[36m (2.8ms)[0m  [1mDELETE FROM "searches";[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 1' LIMIT 1
+  [1m[36mSQL (6.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:52:24 UTC +00:00], ["query", "query 1"], ["updated_at", Mon, 05 Sep 2011 13:52:24 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 2' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:52:24 UTC +00:00], ["query", "query 2"], ["updated_at", Mon, 05 Sep 2011 13:52:24 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 3' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:52:24 UTC +00:00], ["query", "query 3"], ["updated_at", Mon, 05 Sep 2011 13:52:24 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 4' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:52:24 UTC +00:00], ["query", "query 4"], ["updated_at", Mon, 05 Sep 2011 13:52:24 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 5' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:52:24 UTC +00:00], ["query", "query 5"], ["updated_at", Mon, 05 Sep 2011 13:52:24 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 6' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:52:24 UTC +00:00], ["query", "query 6"], ["updated_at", Mon, 05 Sep 2011 13:52:24 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 7' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:52:24 UTC +00:00], ["query", "query 7"], ["updated_at", Mon, 05 Sep 2011 13:52:24 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 8' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:52:24 UTC +00:00], ["query", "query 8"], ["updated_at", Mon, 05 Sep 2011 13:52:24 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 9' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:52:24 UTC +00:00], ["query", "query 9"], ["updated_at", Mon, 05 Sep 2011 13:52:24 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 10' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:52:24 UTC +00:00], ["query", "query 10"], ["updated_at", Mon, 05 Sep 2011 13:52:24 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 11' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:52:24 UTC +00:00], ["query", "query 11"], ["updated_at", Mon, 05 Sep 2011 13:52:24 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 12' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:52:24 UTC +00:00], ["query", "query 12"], ["updated_at", Mon, 05 Sep 2011 13:52:24 UTC +00:00]]
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 13' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:52:24 UTC +00:00], ["query", "query 13"], ["updated_at", Mon, 05 Sep 2011 13:52:24 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 14' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:52:24 UTC +00:00], ["query", "query 14"], ["updated_at", Mon, 05 Sep 2011 13:52:24 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "searches" WHERE "searches"."query" = 'query 15' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "searches" ("created_at", "query", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 05 Sep 2011 13:52:24 UTC +00:00], ["query", "query 15"], ["updated_at", Mon, 05 Sep 2011 13:52:24 UTC +00:00]]
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:52:25 +0200
+  Processing by SearchesController#index as HTML
+  [1m[35mSearch Load (0.3ms)[0m  SELECT "searches".* FROM "searches" LIMIT 10 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "searches" [0m
+Rendered searches/index.html.slim within layouts/application (260.0ms)
+Completed 200 OK in 349ms (Views: 346.9ms | ActiveRecord: 0.4ms)
+  [1m[35m (1.5ms)[0m  DELETE FROM "searches";
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:52:26 +0200
+  Processing by SearchesController#index as HTML
+  [1m[36mSearch Load (0.2ms)[0m  [1mSELECT "searches".* FROM "searches" LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "searches" 
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.3ms)
+  [1m[36m (1.9ms)[0m  [1mDELETE FROM "searches";[0m
+  [1m[35m (1.6ms)[0m  DELETE FROM "searches";
+  [1m[36m (98.9ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (369.3ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateSearches (20110905125807)
+  [1m[35m (156.7ms)[0m  CREATE TABLE `subscriptions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `query` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110905125807')[0m
+  [1m[35m (0.3ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+  [1m[36m (2.6ms)[0m  [1mDELETE FROM "searches";[0m
+  [1m[35m (1.5ms)[0m  DELETE FROM "searches";
+  [1m[36m (2.7ms)[0m  [1mDELETE FROM "searches";[0m
+  [1m[35m (1.7ms)[0m  DELETE FROM "searches";
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (23.7ms)[0m  [1mSELECT DATABASE() as db[0m
+  [1m[35m (1.3ms)[0m  select table_name from information_schema.views where table_schema = 'visible_tweets_test'
+  [1m[36m (1.6ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.8ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 1' LIMIT 1
+  [1m[36mSQL (18.4ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 13:59:46', 'query 1', '2011-09-05 13:59:46')[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 2' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 13:59:46', 'query 2', '2011-09-05 13:59:46')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 3' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 13:59:46', 'query 3', '2011-09-05 13:59:46')[0m
+  [1m[35m (16.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 4' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 13:59:46', 'query 4', '2011-09-05 13:59:46')[0m
+  [1m[35m (18.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 5' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 13:59:46', 'query 5', '2011-09-05 13:59:46')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 6' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 13:59:46', 'query 6', '2011-09-05 13:59:46')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 7' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 13:59:46', 'query 7', '2011-09-05 13:59:46')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 8' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 13:59:46', 'query 8', '2011-09-05 13:59:46')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 9' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 13:59:46', 'query 9', '2011-09-05 13:59:46')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 10' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 13:59:46', 'query 10', '2011-09-05 13:59:46')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 11' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 13:59:46', 'query 11', '2011-09-05 13:59:46')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 12' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 13:59:46', 'query 12', '2011-09-05 13:59:46')[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 13' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 13:59:46', 'query 13', '2011-09-05 13:59:46')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 14' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 13:59:46', 'query 14', '2011-09-05 13:59:46')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 15' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 13:59:46', 'query 15', '2011-09-05 13:59:46')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 15:59:46 +0200
+  [1m[36m (0.4ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (2.0ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 15:59:46 +0200
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (1.3ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 15:59:47 +0200
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (1.2ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.6ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mSELECT DATABASE() as db[0m
+  [1m[35m (1.2ms)[0m  select table_name from information_schema.views where table_schema = 'visible_tweets_test'
+  [1m[36m (1.1ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 1' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:14', 'query 1', '2011-09-05 14:00:14')[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 2' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:14', 'query 2', '2011-09-05 14:00:14')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 3' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:14', 'query 3', '2011-09-05 14:00:14')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 4' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:14', 'query 4', '2011-09-05 14:00:14')[0m
+  [1m[35m (23.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 5' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:14', 'query 5', '2011-09-05 14:00:14')[0m
+  [1m[35m (18.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 6' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:14', 'query 6', '2011-09-05 14:00:14')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 7' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:14', 'query 7', '2011-09-05 14:00:14')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 8' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:14', 'query 8', '2011-09-05 14:00:14')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 9' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:14', 'query 9', '2011-09-05 14:00:14')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 10' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:14', 'query 10', '2011-09-05 14:00:14')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 11' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:14', 'query 11', '2011-09-05 14:00:14')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 12' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:14', 'query 12', '2011-09-05 14:00:14')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 13' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:14', 'query 13', '2011-09-05 14:00:14')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 14' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:14', 'query 14', '2011-09-05 14:00:14')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 15' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:14', 'query 15', '2011-09-05 14:00:14')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:00:15 +0200
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (1.1ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:00:15 +0200
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (1.5ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:00:15 +0200
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (1.1ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mSELECT DATABASE() as db[0m
+  [1m[35m (1.2ms)[0m  select table_name from information_schema.views where table_schema = 'visible_tweets_test'
+  [1m[36m (1.1ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 1' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:26', 'query 1', '2011-09-05 14:00:26')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 2' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:26', 'query 2', '2011-09-05 14:00:26')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 3' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:26', 'query 3', '2011-09-05 14:00:26')[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 4' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:26', 'query 4', '2011-09-05 14:00:26')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 5' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:26', 'query 5', '2011-09-05 14:00:26')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 6' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:26', 'query 6', '2011-09-05 14:00:26')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 7' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:26', 'query 7', '2011-09-05 14:00:26')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 8' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:26', 'query 8', '2011-09-05 14:00:26')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 9' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:26', 'query 9', '2011-09-05 14:00:26')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 10' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:26', 'query 10', '2011-09-05 14:00:26')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 11' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:26', 'query 11', '2011-09-05 14:00:26')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 12' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:26', 'query 12', '2011-09-05 14:00:26')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 13' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:26', 'query 13', '2011-09-05 14:00:26')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 14' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:26', 'query 14', '2011-09-05 14:00:26')[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 15' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:26', 'query 15', '2011-09-05 14:00:26')[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:00:27 +0200
+  Processing by SubscriptionsController#index as HTML
+Completed 500 Internal Server Error in 139ms
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (1.0ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:00:27 +0200
+  Processing by SubscriptionsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (1.3ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:00:27 +0200
+  Processing by SubscriptionsController#new as HTML
+Completed 500 Internal Server Error in 3ms
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (1.2ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mSELECT DATABASE() as db[0m
+  [1m[35m (2.3ms)[0m  select table_name from information_schema.views where table_schema = 'visible_tweets_test'
+  [1m[36m (1.3ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 1' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:39', 'query 1', '2011-09-05 14:00:39')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 2' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:39', 'query 2', '2011-09-05 14:00:39')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 3' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:39', 'query 3', '2011-09-05 14:00:39')[0m
+  [1m[35m (27.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 4' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:39', 'query 4', '2011-09-05 14:00:39')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 5' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:39', 'query 5', '2011-09-05 14:00:39')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 6' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:39', 'query 6', '2011-09-05 14:00:39')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 7' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:39', 'query 7', '2011-09-05 14:00:39')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 8' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:39', 'query 8', '2011-09-05 14:00:39')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 9' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:39', 'query 9', '2011-09-05 14:00:39')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 10' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:39', 'query 10', '2011-09-05 14:00:39')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 11' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:39', 'query 11', '2011-09-05 14:00:39')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 12' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:39', 'query 12', '2011-09-05 14:00:39')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 13' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:39', 'query 13', '2011-09-05 14:00:39')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 14' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:39', 'query 14', '2011-09-05 14:00:39')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 15' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:00:39', 'query 15', '2011-09-05 14:00:39')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:00:39 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (4.4ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Rendered subscriptions/index.html.slim within layouts/application (98.5ms)
+Completed 200 OK in 190ms (Views: 183.4ms | ActiveRecord: 5.1ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (4.0ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:00:40 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (0.4ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (1.7ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:00:40 +0200
+  Processing by SubscriptionsController#new as HTML
+Completed 500 Internal Server Error in 59ms
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (1.2ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mSELECT DATABASE() as db[0m
+  [1m[35m (1.2ms)[0m  select table_name from information_schema.views where table_schema = 'visible_tweets_test'
+  [1m[36m (23.9ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 1' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:13:51', 'query 1', '2011-09-05 14:13:51')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 2' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:13:51', 'query 2', '2011-09-05 14:13:51')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 3' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:13:51', 'query 3', '2011-09-05 14:13:51')[0m
+  [1m[35m (26.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 4' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:13:51', 'query 4', '2011-09-05 14:13:51')[0m
+  [1m[35m (18.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 5' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:13:51', 'query 5', '2011-09-05 14:13:51')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 6' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:13:51', 'query 6', '2011-09-05 14:13:51')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 7' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:13:51', 'query 7', '2011-09-05 14:13:51')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 8' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:13:51', 'query 8', '2011-09-05 14:13:51')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 9' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:13:51', 'query 9', '2011-09-05 14:13:51')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 10' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:13:51', 'query 10', '2011-09-05 14:13:51')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 11' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:13:51', 'query 11', '2011-09-05 14:13:51')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 12' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:13:51', 'query 12', '2011-09-05 14:13:51')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 13' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:13:51', 'query 13', '2011-09-05 14:13:51')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 14' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:13:51', 'query 14', '2011-09-05 14:13:51')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 15' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:13:51', 'query 15', '2011-09-05 14:13:51')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:13:52 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (4.2ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Rendered application/index.html.slim within layouts/application (158.5ms)
+Completed 200 OK in 266ms (Views: 259.5ms | ActiveRecord: 4.8ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (1.1ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:13:52 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (0.4ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (16.7ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:13:52 +0200
+  Processing by SubscriptionsController#new as HTML
+Rendered subscriptions/_form.html.slim (315.6ms)
+Completed 200 OK in 323ms (Views: 321.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (97.2ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mSELECT DATABASE() as db[0m
+  [1m[35m (1.2ms)[0m  select table_name from information_schema.views where table_schema = 'visible_tweets_test'
+  [1m[36m (1.0ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 1' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:14:30', 'query 1', '2011-09-05 14:14:30')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 2' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:14:30', 'query 2', '2011-09-05 14:14:30')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 3' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:14:30', 'query 3', '2011-09-05 14:14:30')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 4' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:14:30', 'query 4', '2011-09-05 14:14:30')[0m
+  [1m[35m (31.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 5' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:14:30', 'query 5', '2011-09-05 14:14:30')[0m
+  [1m[35m (35.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 6' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:14:30', 'query 6', '2011-09-05 14:14:30')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 7' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:14:30', 'query 7', '2011-09-05 14:14:30')[0m
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 8' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:14:30', 'query 8', '2011-09-05 14:14:30')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 9' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:14:30', 'query 9', '2011-09-05 14:14:30')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 10' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:14:30', 'query 10', '2011-09-05 14:14:30')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 11' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:14:30', 'query 11', '2011-09-05 14:14:30')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 12' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:14:30', 'query 12', '2011-09-05 14:14:30')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 13' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:14:30', 'query 13', '2011-09-05 14:14:30')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 14' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:14:30', 'query 14', '2011-09-05 14:14:30')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 15' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:14:30', 'query 15', '2011-09-05 14:14:30')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:14:31 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (4.4ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Rendered application/index.html.slim within layouts/application (104.3ms)
+Completed 200 OK in 194ms (Views: 187.5ms | ActiveRecord: 4.8ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (7.0ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:14:32 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (0.4ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (29.5ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:14:32 +0200
+  Processing by SubscriptionsController#new as HTML
+Rendered subscriptions/_form.html.slim (320.7ms)
+Completed 200 OK in 328ms (Views: 327.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (1.4ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mSELECT DATABASE() as db[0m
+  [1m[35m (12.1ms)[0m  select table_name from information_schema.views where table_schema = 'visible_tweets_test'
+  [1m[36m (28.9ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 1' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:14:52', 'query 1', '2011-09-05 14:14:52')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 2' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:14:52', 'query 2', '2011-09-05 14:14:52')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 3' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:14:52', 'query 3', '2011-09-05 14:14:52')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 4' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:14:52', 'query 4', '2011-09-05 14:14:52')[0m
+  [1m[35m (25.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 5' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:14:52', 'query 5', '2011-09-05 14:14:52')[0m
+  [1m[35m (18.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 6' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:14:52', 'query 6', '2011-09-05 14:14:52')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 7' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:14:52', 'query 7', '2011-09-05 14:14:52')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 8' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:14:52', 'query 8', '2011-09-05 14:14:52')[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 9' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:14:52', 'query 9', '2011-09-05 14:14:52')[0m
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 10' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:14:52', 'query 10', '2011-09-05 14:14:52')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 11' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:14:52', 'query 11', '2011-09-05 14:14:52')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 12' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:14:52', 'query 12', '2011-09-05 14:14:52')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 13' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:14:52', 'query 13', '2011-09-05 14:14:52')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 14' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:14:52', 'query 14', '2011-09-05 14:14:52')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 15' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:14:52', 'query 15', '2011-09-05 14:14:52')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:14:53 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (4.1ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Rendered application/index.html.slim within layouts/application (106.5ms)
+Completed 200 OK in 197ms (Views: 190.7ms | ActiveRecord: 4.5ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (13.1ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:14:54 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (0.4ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (23.2ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:14:54 +0200
+  Processing by SubscriptionsController#new as HTML
+Rendered subscriptions/_form.html.slim (317.9ms)
+Completed 200 OK in 324ms (Views: 322.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (1.1ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mSELECT DATABASE() as db[0m
+  [1m[35m (1.4ms)[0m  select table_name from information_schema.views where table_schema = 'visible_tweets_test'
+  [1m[36m (1.2ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 1' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:15:12', 'query 1', '2011-09-05 14:15:12')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 2' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:15:12', 'query 2', '2011-09-05 14:15:12')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 3' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:15:12', 'query 3', '2011-09-05 14:15:12')[0m
+  [1m[35m (28.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 4' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:15:12', 'query 4', '2011-09-05 14:15:12')[0m
+  [1m[35m (83.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 5' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:15:12', 'query 5', '2011-09-05 14:15:12')[0m
+  [1m[35m (24.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 6' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:15:12', 'query 6', '2011-09-05 14:15:12')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 7' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:15:12', 'query 7', '2011-09-05 14:15:12')[0m
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 8' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:15:13', 'query 8', '2011-09-05 14:15:13')[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 9' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:15:13', 'query 9', '2011-09-05 14:15:13')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 10' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:15:13', 'query 10', '2011-09-05 14:15:13')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 11' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:15:13', 'query 11', '2011-09-05 14:15:13')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 12' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:15:13', 'query 12', '2011-09-05 14:15:13')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 13' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:15:13', 'query 13', '2011-09-05 14:15:13')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 14' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:15:13', 'query 14', '2011-09-05 14:15:13')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 15' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:15:13', 'query 15', '2011-09-05 14:15:13')[0m
+  [1m[35m (5.7ms)[0m  COMMIT
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:15:13 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (4.0ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Rendered application/index.html.slim within layouts/application (110.1ms)
+Completed 200 OK in 201ms (Views: 195.7ms | ActiveRecord: 4.3ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (1.7ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:15:14 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (0.7ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 1.0ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (3.9ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:15:14 +0200
+  Processing by SubscriptionsController#new as HTML
+Rendered subscriptions/_form.html.slim (321.0ms)
+Completed 200 OK in 327ms (Views: 326.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (65.6ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mSELECT DATABASE() as db[0m
+  [1m[35m (1.2ms)[0m  select table_name from information_schema.views where table_schema = 'visible_tweets_test'
+  [1m[36m (38.0ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 1' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:15:31', 'query 1', '2011-09-05 14:15:31')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 2' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:15:31', 'query 2', '2011-09-05 14:15:31')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 3' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:15:31', 'query 3', '2011-09-05 14:15:31')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 4' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:15:31', 'query 4', '2011-09-05 14:15:31')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 5' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:15:31', 'query 5', '2011-09-05 14:15:31')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 6' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:15:31', 'query 6', '2011-09-05 14:15:31')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 7' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:15:31', 'query 7', '2011-09-05 14:15:31')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 8' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:15:31', 'query 8', '2011-09-05 14:15:31')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 9' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:15:31', 'query 9', '2011-09-05 14:15:31')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 10' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:15:31', 'query 10', '2011-09-05 14:15:31')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 11' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:15:31', 'query 11', '2011-09-05 14:15:31')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 12' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:15:31', 'query 12', '2011-09-05 14:15:31')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 13' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:15:31', 'query 13', '2011-09-05 14:15:31')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 14' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:15:31', 'query 14', '2011-09-05 14:15:31')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 15' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:15:31', 'query 15', '2011-09-05 14:15:31')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:15:32 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (4.4ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Rendered application/index.html.slim within layouts/application (102.3ms)
+Completed 200 OK in 192ms (Views: 185.9ms | ActiveRecord: 4.8ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (33.9ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:15:32 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (0.3ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (1.1ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:15:32 +0200
+  Processing by SubscriptionsController#new as HTML
+Rendered subscriptions/_form.html.slim (324.0ms)
+Completed 200 OK in 330ms (Views: 328.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (28.6ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mSELECT DATABASE() as db[0m
+  [1m[35m (30.5ms)[0m  select table_name from information_schema.views where table_schema = 'visible_tweets_test'
+  [1m[36m (59.3ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 1' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:16:36', 'query 1', '2011-09-05 14:16:36')[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 2' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:16:36', 'query 2', '2011-09-05 14:16:36')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 3' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:16:36', 'query 3', '2011-09-05 14:16:36')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 4' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:16:36', 'query 4', '2011-09-05 14:16:36')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 5' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:16:36', 'query 5', '2011-09-05 14:16:36')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 6' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:16:36', 'query 6', '2011-09-05 14:16:36')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 7' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:16:36', 'query 7', '2011-09-05 14:16:36')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 8' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:16:36', 'query 8', '2011-09-05 14:16:36')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 9' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:16:36', 'query 9', '2011-09-05 14:16:36')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 10' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:16:36', 'query 10', '2011-09-05 14:16:36')[0m
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 11' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:16:36', 'query 11', '2011-09-05 14:16:36')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 12' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:16:36', 'query 12', '2011-09-05 14:16:36')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 13' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:16:36', 'query 13', '2011-09-05 14:16:36')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 14' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:16:36', 'query 14', '2011-09-05 14:16:36')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 15' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:16:36', 'query 15', '2011-09-05 14:16:36')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:16:37 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (4.0ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Rendered application/index.html.slim within layouts/application (103.3ms)
+Completed 200 OK in 193ms (Views: 187.2ms | ActiveRecord: 4.7ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (131.6ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:16:37 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (0.3ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (11.5ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:16:38 +0200
+  Processing by SubscriptionsController#new as HTML
+Rendered subscriptions/_form.html.slim (749.7ms)
+Completed 200 OK in 763ms (Views: 757.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (17.6ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mSELECT DATABASE() as db[0m
+  [1m[35m (1.2ms)[0m  select table_name from information_schema.views where table_schema = 'visible_tweets_test'
+  [1m[36m (21.9ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 1' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:16:56', 'query 1', '2011-09-05 14:16:56')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 2' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:16:56', 'query 2', '2011-09-05 14:16:56')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 3' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:16:56', 'query 3', '2011-09-05 14:16:56')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 4' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:16:56', 'query 4', '2011-09-05 14:16:56')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 5' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:16:56', 'query 5', '2011-09-05 14:16:56')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 6' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:16:56', 'query 6', '2011-09-05 14:16:56')[0m
+  [1m[35m (42.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 7' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:16:56', 'query 7', '2011-09-05 14:16:56')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 8' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:16:56', 'query 8', '2011-09-05 14:16:56')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 9' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:16:56', 'query 9', '2011-09-05 14:16:56')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 10' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:16:56', 'query 10', '2011-09-05 14:16:56')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 11' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:16:56', 'query 11', '2011-09-05 14:16:56')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 12' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:16:56', 'query 12', '2011-09-05 14:16:56')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 13' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:16:56', 'query 13', '2011-09-05 14:16:56')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 14' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:16:56', 'query 14', '2011-09-05 14:16:56')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 15' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:16:56', 'query 15', '2011-09-05 14:16:56')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:16:57 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (4.3ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Rendered application/index.html.slim within layouts/application (102.5ms)
+Completed 200 OK in 193ms (Views: 187.2ms | ActiveRecord: 4.6ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (80.3ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:16:57 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (0.4ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (1.3ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:16:57 +0200
+  Processing by SubscriptionsController#new as HTML
+Rendered subscriptions/_form.html.slim (324.5ms)
+Completed 200 OK in 331ms (Views: 329.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (52.4ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.9ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (1.5ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mSELECT DATABASE() as db[0m
+  [1m[35m (0.9ms)[0m  select table_name from information_schema.views where table_schema = 'visible_tweets_test'
+  [1m[36m (43.1ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 1' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:17:14', 'query 1', '2011-09-05 14:17:14')[0m
+  [1m[35m (5.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 2' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:17:14', 'query 2', '2011-09-05 14:17:14')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 3' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:17:14', 'query 3', '2011-09-05 14:17:14')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 4' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:17:14', 'query 4', '2011-09-05 14:17:14')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 5' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:17:14', 'query 5', '2011-09-05 14:17:14')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 6' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:17:14', 'query 6', '2011-09-05 14:17:14')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 7' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:17:14', 'query 7', '2011-09-05 14:17:14')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 8' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:17:14', 'query 8', '2011-09-05 14:17:14')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 9' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:17:14', 'query 9', '2011-09-05 14:17:14')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 10' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:17:14', 'query 10', '2011-09-05 14:17:14')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 11' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:17:14', 'query 11', '2011-09-05 14:17:14')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 12' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:17:14', 'query 12', '2011-09-05 14:17:14')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 13' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:17:14', 'query 13', '2011-09-05 14:17:14')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 14' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:17:14', 'query 14', '2011-09-05 14:17:14')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 15' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:17:14', 'query 15', '2011-09-05 14:17:14')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:17:15 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (0.7ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Rendered application/index.html.slim within layouts/application (98.0ms)
+Completed 200 OK in 202ms (Views: 199.1ms | ActiveRecord: 1.1ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (28.3ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:17:15 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (0.4ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (1.0ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:17:15 +0200
+  Processing by SubscriptionsController#new as HTML
+Rendered subscriptions/_form.html.slim (418.8ms)
+Completed 200 OK in 426ms (Views: 425.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (29.0ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.5ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.3ms)[0m  [1mSELECT DATABASE() as db[0m
+  [1m[35m (1.2ms)[0m  select table_name from information_schema.views where table_schema = 'visible_tweets_test'
+  [1m[36m (27.5ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 1' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:19:21', 'query 1', '2011-09-05 14:19:21')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 2' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:19:21', 'query 2', '2011-09-05 14:19:21')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 3' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:19:21', 'query 3', '2011-09-05 14:19:21')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 4' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:19:21', 'query 4', '2011-09-05 14:19:21')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 5' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:19:21', 'query 5', '2011-09-05 14:19:21')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 6' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:19:21', 'query 6', '2011-09-05 14:19:21')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 7' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:19:21', 'query 7', '2011-09-05 14:19:21')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 8' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:19:21', 'query 8', '2011-09-05 14:19:21')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 9' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:19:21', 'query 9', '2011-09-05 14:19:21')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 10' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:19:21', 'query 10', '2011-09-05 14:19:21')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 11' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:19:21', 'query 11', '2011-09-05 14:19:21')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 12' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:19:21', 'query 12', '2011-09-05 14:19:21')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 13' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:19:21', 'query 13', '2011-09-05 14:19:21')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 14' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:19:21', 'query 14', '2011-09-05 14:19:21')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 15' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:19:21', 'query 15', '2011-09-05 14:19:21')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:19:22 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (0.9ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Rendered application/index.html.slim within layouts/application (98.8ms)
+Completed 200 OK in 188ms (Views: 185.7ms | ActiveRecord: 1.3ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (1.3ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:19:23 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (0.3ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (1.1ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:19:23 +0200
+  Processing by SubscriptionsController#new as HTML
+Rendered subscriptions/_form.html.slim (329.0ms)
+Completed 200 OK in 335ms (Views: 334.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/subscriptions" for 127.0.0.1 at 2011-09-05 16:19:23 +0200
+  Processing by SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "subscription"=>{"query"=>"Test 123"}, "commit"=>"Crea Sottoscrizione"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'Test 123' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:19:23', 'Test 123', '2011-09-05 14:19:23')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://www.example.com/subscriptions/1
+Completed 302 Found in 63ms
+
+
+Started GET "/subscriptions/1" for 127.0.0.1 at 2011-09-05 16:19:23 +0200
+  Processing by SubscriptionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubscription Load (32.2ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` WHERE `subscriptions`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 37ms
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (15.1ms)[0m  TRUNCATE TABLE `subscriptions`;
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mSELECT DATABASE() as db[0m
+  [1m[35m (1.7ms)[0m  select table_name from information_schema.views where table_schema = 'visible_tweets_test'
+  [1m[36m (28.2ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 1' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:23:33', 'query 1', '2011-09-05 14:23:33')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 2' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:23:33', 'query 2', '2011-09-05 14:23:33')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 3' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:23:33', 'query 3', '2011-09-05 14:23:33')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 4' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:23:33', 'query 4', '2011-09-05 14:23:33')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 5' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:23:33', 'query 5', '2011-09-05 14:23:33')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.0ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 6' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:23:33', 'query 6', '2011-09-05 14:23:33')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 7' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:23:33', 'query 7', '2011-09-05 14:23:33')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 8' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:23:33', 'query 8', '2011-09-05 14:23:33')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 9' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:23:33', 'query 9', '2011-09-05 14:23:33')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 10' LIMIT 1
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:23:33', 'query 10', '2011-09-05 14:23:33')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 11' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:23:33', 'query 11', '2011-09-05 14:23:33')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 12' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:23:33', 'query 12', '2011-09-05 14:23:33')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 13' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:23:33', 'query 13', '2011-09-05 14:23:33')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 14' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:23:33', 'query 14', '2011-09-05 14:23:33')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 15' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:23:33', 'query 15', '2011-09-05 14:23:33')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:23:33 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (4.4ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+Rendered application/index.html.slim within layouts/application (129.3ms)
+Completed 500 Internal Server Error in 216ms
+  [1m[35m (0.5ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (2.5ms)[0m  TRUNCATE TABLE `subscriptions`;
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:23:34 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[35mSubscription Load (0.4ms)[0m  SELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0
+Completed 500 Internal Server Error in 84ms
+  [1m[36m (0.4ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (2.0ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:23:34 +0200
+  Processing by SubscriptionsController#new as HTML
+Rendered subscriptions/_form.html.slim (338.0ms)
+Completed 200 OK in 365ms (Views: 364.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/subscriptions" for 127.0.0.1 at 2011-09-05 16:23:34 +0200
+  Processing by SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "subscription"=>{"query"=>"Test 123"}, "commit"=>"Crea Sottoscrizione"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'Test 123' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:23:34', 'Test 123', '2011-09-05 14:23:34')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://www.example.com/subscriptions/1
+Completed 302 Found in 9ms
+
+
+Started GET "/subscriptions/1" for 127.0.0.1 at 2011-09-05 16:23:34 +0200
+  Processing by SubscriptionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubscription Load (1.1ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` WHERE `subscriptions`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 52ms
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (1.2ms)[0m  TRUNCATE TABLE `subscriptions`;
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mSELECT DATABASE() as db[0m
+  [1m[35m (1.2ms)[0m  select table_name from information_schema.views where table_schema = 'visible_tweets_test'
+  [1m[36m (25.7ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 1' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:24:50', 'query 1', '2011-09-05 14:24:50')[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 2' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:24:50', 'query 2', '2011-09-05 14:24:50')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 3' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:24:50', 'query 3', '2011-09-05 14:24:50')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 4' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:24:50', 'query 4', '2011-09-05 14:24:50')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 5' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:24:50', 'query 5', '2011-09-05 14:24:50')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 6' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:24:50', 'query 6', '2011-09-05 14:24:50')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 7' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:24:50', 'query 7', '2011-09-05 14:24:50')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 8' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:24:50', 'query 8', '2011-09-05 14:24:50')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 9' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:24:50', 'query 9', '2011-09-05 14:24:50')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 10' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:24:50', 'query 10', '2011-09-05 14:24:50')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 11' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:24:50', 'query 11', '2011-09-05 14:24:50')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 12' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:24:50', 'query 12', '2011-09-05 14:24:50')[0m
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 13' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:24:50', 'query 13', '2011-09-05 14:24:50')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 14' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:24:50', 'query 14', '2011-09-05 14:24:50')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 15' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:24:50', 'query 15', '2011-09-05 14:24:50')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:24:51 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (4.0ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+Rendered application/index.html.slim within layouts/application (177.7ms)
+Completed 500 Internal Server Error in 269ms
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (1.3ms)[0m  TRUNCATE TABLE `subscriptions`;
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:24:51 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[35mSubscription Load (0.8ms)[0m  SELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0
+Completed 500 Internal Server Error in 43ms
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (1.1ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:24:51 +0200
+  Processing by SubscriptionsController#new as HTML
+Rendered subscriptions/_form.html.slim (355.0ms)
+Completed 200 OK in 383ms (Views: 381.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/subscriptions" for 127.0.0.1 at 2011-09-05 16:24:52 +0200
+  Processing by SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "subscription"=>{"query"=>"Test 123"}, "commit"=>"Crea Sottoscrizione"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'Test 123' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:24:52', 'Test 123', '2011-09-05 14:24:52')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://www.example.com/subscriptions/1
+Completed 302 Found in 8ms
+
+
+Started GET "/subscriptions/1" for 127.0.0.1 at 2011-09-05 16:24:52 +0200
+  Processing by SubscriptionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubscription Load (0.8ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` WHERE `subscriptions`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 47ms
+  [1m[35m (0.5ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (26.4ms)[0m  TRUNCATE TABLE `subscriptions`;
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mSELECT DATABASE() as db[0m
+  [1m[35m (1.3ms)[0m  select table_name from information_schema.views where table_schema = 'visible_tweets_test'
+  [1m[36m (37.4ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 1' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:25:19', 'query 1', '2011-09-05 14:25:19')[0m
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 2' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:25:19', 'query 2', '2011-09-05 14:25:19')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 3' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:25:19', 'query 3', '2011-09-05 14:25:19')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 4' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:25:19', 'query 4', '2011-09-05 14:25:19')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 5' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:25:19', 'query 5', '2011-09-05 14:25:19')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 6' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:25:19', 'query 6', '2011-09-05 14:25:19')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 7' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:25:19', 'query 7', '2011-09-05 14:25:19')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 8' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:25:19', 'query 8', '2011-09-05 14:25:19')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 9' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:25:19', 'query 9', '2011-09-05 14:25:19')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 10' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:25:19', 'query 10', '2011-09-05 14:25:19')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 11' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:25:19', 'query 11', '2011-09-05 14:25:19')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 12' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:25:19', 'query 12', '2011-09-05 14:25:19')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 13' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:25:19', 'query 13', '2011-09-05 14:25:19')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 14' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:25:19', 'query 14', '2011-09-05 14:25:19')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 15' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:25:19', 'query 15', '2011-09-05 14:25:19')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:25:20 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (4.5ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Rendered application/index.html.slim within layouts/application (124.6ms)
+Completed 200 OK in 220ms (Views: 213.7ms | ActiveRecord: 4.9ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (1.2ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:25:21 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (0.3ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.6ms)
+  [1m[36m (6.9ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (1.3ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:25:21 +0200
+  Processing by SubscriptionsController#new as HTML
+Rendered subscriptions/_form.html.slim (343.0ms)
+Completed 200 OK in 351ms (Views: 349.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/subscriptions" for 127.0.0.1 at 2011-09-05 16:25:21 +0200
+  Processing by SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "subscription"=>{"query"=>"Test 123"}, "commit"=>"Crea Sottoscrizione"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'Test 123' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:25:21', 'Test 123', '2011-09-05 14:25:21')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://www.example.com/subscriptions/1
+Completed 302 Found in 63ms
+
+
+Started GET "/subscriptions/1" for 127.0.0.1 at 2011-09-05 16:25:21 +0200
+  Processing by SubscriptionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubscription Load (0.9ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` WHERE `subscriptions`.`id` = 1 LIMIT 1[0m
+Rendered subscriptions/_resource.html.slim (1.5ms)
+Completed 200 OK in 55ms (Views: 6.6ms | ActiveRecord: 0.9ms)
+  [1m[35mSubscription Load (0.8ms)[0m  SELECT `subscriptions`.* FROM `subscriptions` LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (1.2ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (52.4ms)[0m  [1mSELECT DATABASE() as db[0m
+  [1m[35m (2.1ms)[0m  select table_name from information_schema.views where table_schema = 'visible_tweets_test'
+  [1m[36m (28.0ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 1' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:27:18', 'query 1', '2011-09-05 14:27:18')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 2' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:27:18', 'query 2', '2011-09-05 14:27:18')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 3' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:27:18', 'query 3', '2011-09-05 14:27:18')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 4' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:27:18', 'query 4', '2011-09-05 14:27:18')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 5' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:27:18', 'query 5', '2011-09-05 14:27:18')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 6' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:27:18', 'query 6', '2011-09-05 14:27:18')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 7' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:27:18', 'query 7', '2011-09-05 14:27:18')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 8' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:27:18', 'query 8', '2011-09-05 14:27:18')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 9' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:27:18', 'query 9', '2011-09-05 14:27:18')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 10' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:27:18', 'query 10', '2011-09-05 14:27:18')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 11' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:27:18', 'query 11', '2011-09-05 14:27:18')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 12' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:27:18', 'query 12', '2011-09-05 14:27:18')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 13' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:27:18', 'query 13', '2011-09-05 14:27:18')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 14' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:27:18', 'query 14', '2011-09-05 14:27:18')[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'query 15' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:27:18', 'query 15', '2011-09-05 14:27:18')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:27:18 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (4.0ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Rendered application/index.html.slim within layouts/application (202.9ms)
+Completed 200 OK in 302ms (Views: 295.9ms | ActiveRecord: 4.4ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (1.3ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:27:19 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (0.4ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (1.4ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:27:19 +0200
+  Processing by SubscriptionsController#new as HTML
+Rendered subscriptions/_form.html.slim (468.0ms)
+Completed 200 OK in 483ms (Views: 481.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/subscriptions" for 127.0.0.1 at 2011-09-05 16:27:20 +0200
+  Processing by SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "subscription"=>{"query"=>"Test 123"}, "commit"=>"Crea Sottoscrizione"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'Test 123' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:27:20', 'Test 123', '2011-09-05 14:27:20')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://www.example.com/subscriptions/1
+Completed 302 Found in 67ms
+
+
+Started GET "/subscriptions/1" for 127.0.0.1 at 2011-09-05 16:27:20 +0200
+  Processing by SubscriptionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubscription Load (0.8ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` WHERE `subscriptions`.`id` = 1 LIMIT 1[0m
+Rendered subscriptions/_resource.html.slim (1.3ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.8ms)
+  [1m[35mSubscription Load (0.8ms)[0m  SELECT `subscriptions`.* FROM `subscriptions` LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (30.1ms)[0m  [1mTRUNCATE TABLE `subscriptions`;[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1

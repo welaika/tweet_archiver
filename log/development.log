@@ -1,0 +1,2421 @@
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-05 14:43:59 +0200
+
+Mysql2::Error (Unknown database 'visible_tweets'):
+  
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.6ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-05 14:44:00 +0200
+
+Mysql2::Error (Unknown database 'visible_tweets'):
+  
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.6ms)
+  [1m[36m (117.0ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (316.6ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateSearches (20110905125807)
+  [1m[35m (159.9ms)[0m  CREATE TABLE `searches` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `query` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (12.4ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110905125807')[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:20:01 +0200
+
+ActionController::RoutingError (uninitialized constant SearchesController):
+  
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (23.1ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:20:03 +0200
+
+ActionController::RoutingError (uninitialized constant SearchesController):
+  
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:21:25 +0200
+  Processing by SearchesController#index as HTML
+Completed 500 Internal Server Error in 65ms
+
+ActionView::MissingTemplate (Missing template searches/index, application/index with {:handlers=>[:erb, :builder, :slim, :coffee], :formats=>[:html], :locale=>[:en, :en]}. Searched in:
+  * "/Users/steffoz/dev/visible_tweets/app/views"
+):
+  
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.0ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:21:25 +0200
+  Processing by SearchesController#index as */*
+Completed 500 Internal Server Error in 16ms
+
+ActionView::MissingTemplate (Missing template searches/index, application/index with {:handlers=>[:erb, :builder, :slim, :coffee], :formats=>[:html, :text, :js, :css, :ics, :csv, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json], :locale=>[:en, :en]}. Searched in:
+  * "/Users/steffoz/dev/visible_tweets/app/views"
+):
+  
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.5ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:21:51 +0200
+  Processing by SearchesController#index as HTML
+Rendered searches/index.html.slim within layouts/application (61.4ms)
+Compiled application.css  (31ms)  (pid 24440)
+Compiled application.js  (24ms)  (pid 24440)
+Compiled jquery.js  (14ms)  (pid 24440)
+Compiled jquery_ujs.js  (1ms)  (pid 24440)
+Completed 200 OK in 207ms (Views: 206.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:21:52 +0200
+  Processing by SearchesController#index as */*
+Rendered searches/index.html.slim within layouts/application (2.3ms)
+Completed 200 OK in 109ms (Views: 108.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 15:21:52 +0200
+Served asset /application.css - 200 OK (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 15:21:52 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 15:21:52 +0200
+Served asset /jquery.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 15:21:52 +0200
+Served asset /application.js - 200 OK (24ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:22:03 +0200
+  Processing by SearchesController#index as HTML
+Rendered searches/index.html.slim within layouts/application (2.4ms)
+Completed 200 OK in 20ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:22:03 +0200
+  Processing by SearchesController#index as */*
+Rendered searches/index.html.slim within layouts/application (2.5ms)
+Completed 200 OK in 39ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 15:22:04 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 15:22:04 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 15:22:04 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 15:22:04 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-05 15:29:19 +0200
+  Processing by SearchesController#index as HTML
+ERROR: compiling _app_views_searches_index_html_slim___4171663370383599734_2157395060 RAISED /Users/steffoz/dev/visible_tweets/app/views/searches/index.html.slim:3: syntax error, unexpected '=', expecting keyword_end
+..._compiler2 = dom_class(search)=; case (_slim_compiler2); whe...
+...                               ^
+Function body:           def _app_views_searches_index_html_slim___4171663370383599734_2157395060(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "searches/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActiveSupport::SafeBuffer.new; @output_buffer.safe_concat(("<ul>")); 
+; @searches.each do |search|; 
+; @output_buffer.safe_concat(("<li")); _temple_html_attributemerger1 = ActiveSupport::SafeBuffer.new; _slim_compiler2 = dom_class(search)=; case (_slim_compiler2); when true; _temple_html_attributemerger1.safe_concat(("class")); when false, nil; else; _temple_html_attributemerger1.safe_concat(((::Temple::Utils.escape_html_safe((_slim_compiler2.respond_to?(:join) ? _slim_compiler2.flatten.compact.join(" ") : _slim_compiler2))).to_s)); end; _temple_html_attributemerger1; if !_temple_html_attributemerger1.empty?; @output_buffer.safe_concat((" class=\"")); @output_buffer.safe_concat(((_temple_html_attributemerger1).to_s)); @output_buffer.safe_concat(("\"")); end; _temple_html_attributemerger2 = ActiveSupport::SafeBuffer.new; _slim_compiler1 = dom_id(search); case (_slim_compiler1); when true; _temple_html_attributemerger2.safe_concat(("id")); when false, nil; else; _temple_html_attributemerger2.safe_concat(((::Temple::Utils.escape_html_safe((dom_id(search)))).to_s)); end; _temple_html_attributemerger2; if !_temple_html_attributemerger2.empty?; @output_buffer.safe_concat((" id=\"")); @output_buffer.safe_concat(((_temple_html_attributemerger2).to_s)); @output_buffer.safe_concat(("\"")); end; @output_buffer.safe_concat((">search.query</li>")); 
+; end; @output_buffer.safe_concat(("</ul>")); @output_buffer
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `module_eval'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `compile'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/template.rb:190:in `compile!'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/template.rb:143:in `block in render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/notifications.rb:55:in `instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/template.rb:142:in `render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:40:in `block (2 levels) in render_template'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:33:in `block in instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `block in instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:39:in `block in render_template'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:47:in `render_with_layout'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:99:in `render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/steffoz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/mime_responds.rb:268:in `block in retrieve_response_from_mimes'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/responder.rb:231:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/responder.rb:231:in `default_render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/responder.rb:160:in `to_html'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/responders-0.6.4/lib/responders/flash_responder.rb:93:in `to_html'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/responder.rb:153:in `respond'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/responder.rb:146:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/mime_responds.rb:238:in `respond_with'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/inherited_resources-1.3.0/lib/inherited_resources/actions.rb:7:in `index'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:416:in `_run__3628721680945725802__process_action__2542953813183622221__callbacks'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `block in instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:121:in `process'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal.rb:193:in `dispatch'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal.rb:236:in `block in action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:29:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `block in call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:531:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/etag.rb:23:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/flash.rb:243:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/session/abstract/id.rb:195:in `context'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/session/abstract/id.rb:190:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/cookies.rb:326:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activerecord-3.1.0/lib/active_record/query_cache.rb:62:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activerecord-3.1.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/sendfile.rb:101:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/railties-3.1.0/lib/rails/rack/logger.rb:13:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/methodoverride.rb:24:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/runtime.rb:17:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/lock.rb:15:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/static.rb:53:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/railties-3.1.0/lib/rails/engine.rb:455:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/railties-3.1.0/lib/rails/rack/content_length.rb:16:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/railties-3.1.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/handler/webrick.rb:59:in `service'
+/Users/steffoz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/steffoz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/steffoz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered searches/index.html.slim within layouts/application (103.3ms)
+Completed 500 Internal Server Error in 172ms
+
+ActionView::Template::Error (/Users/steffoz/dev/visible_tweets/app/views/searches/index.html.slim:3: syntax error, unexpected '=', expecting keyword_end
+..._compiler2 = dom_class(search)=; case (_slim_compiler2); whe...
+...                               ^):
+    1: ul
+    2:   - @searches.each do |search|
+    3:     li id=dom_id(search) class=dom_class(search)= search.query
+  
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (31.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-05 15:29:21 +0200
+  Processing by SearchesController#index as */*
+ERROR: compiling _app_views_searches_index_html_slim___4171663370383599734_2157395060 RAISED /Users/steffoz/dev/visible_tweets/app/views/searches/index.html.slim:3: syntax error, unexpected '=', expecting keyword_end
+..._compiler2 = dom_class(search)=; case (_slim_compiler2); whe...
+...                               ^
+Function body:           def _app_views_searches_index_html_slim___4171663370383599734_2157395060(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "searches/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActiveSupport::SafeBuffer.new; @output_buffer.safe_concat(("<ul>")); 
+; @searches.each do |search|; 
+; @output_buffer.safe_concat(("<li")); _temple_html_attributemerger1 = ActiveSupport::SafeBuffer.new; _slim_compiler2 = dom_class(search)=; case (_slim_compiler2); when true; _temple_html_attributemerger1.safe_concat(("class")); when false, nil; else; _temple_html_attributemerger1.safe_concat(((::Temple::Utils.escape_html_safe((_slim_compiler2.respond_to?(:join) ? _slim_compiler2.flatten.compact.join(" ") : _slim_compiler2))).to_s)); end; _temple_html_attributemerger1; if !_temple_html_attributemerger1.empty?; @output_buffer.safe_concat((" class=\"")); @output_buffer.safe_concat(((_temple_html_attributemerger1).to_s)); @output_buffer.safe_concat(("\"")); end; _temple_html_attributemerger2 = ActiveSupport::SafeBuffer.new; _slim_compiler1 = dom_id(search); case (_slim_compiler1); when true; _temple_html_attributemerger2.safe_concat(("id")); when false, nil; else; _temple_html_attributemerger2.safe_concat(((::Temple::Utils.escape_html_safe((dom_id(search)))).to_s)); end; _temple_html_attributemerger2; if !_temple_html_attributemerger2.empty?; @output_buffer.safe_concat((" id=\"")); @output_buffer.safe_concat(((_temple_html_attributemerger2).to_s)); @output_buffer.safe_concat(("\"")); end; @output_buffer.safe_concat((">search.query</li>")); 
+; end; @output_buffer.safe_concat(("</ul>")); @output_buffer
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `module_eval'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `compile'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/template.rb:190:in `compile!'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/template.rb:143:in `block in render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/notifications.rb:55:in `instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/template.rb:142:in `render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:40:in `block (2 levels) in render_template'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:33:in `block in instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `block in instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:39:in `block in render_template'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:47:in `render_with_layout'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:99:in `render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/steffoz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/mime_responds.rb:268:in `block in retrieve_response_from_mimes'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/responder.rb:231:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/responder.rb:231:in `default_render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/responder.rb:160:in `to_html'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/responders-0.6.4/lib/responders/flash_responder.rb:93:in `to_html'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/responder.rb:153:in `respond'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/responder.rb:146:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/mime_responds.rb:238:in `respond_with'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/inherited_resources-1.3.0/lib/inherited_resources/actions.rb:7:in `index'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:416:in `_run__3628721680945725802__process_action__2542953813183622221__callbacks'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `block in instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:121:in `process'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal.rb:193:in `dispatch'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal.rb:236:in `block in action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:29:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `block in call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:531:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/etag.rb:23:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/flash.rb:243:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/session/abstract/id.rb:195:in `context'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/session/abstract/id.rb:190:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/cookies.rb:326:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activerecord-3.1.0/lib/active_record/query_cache.rb:62:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activerecord-3.1.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/sendfile.rb:101:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/railties-3.1.0/lib/rails/rack/logger.rb:13:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/methodoverride.rb:24:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/runtime.rb:17:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/lock.rb:15:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/static.rb:53:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/railties-3.1.0/lib/rails/engine.rb:455:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/railties-3.1.0/lib/rails/rack/content_length.rb:16:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/railties-3.1.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/handler/webrick.rb:59:in `service'
+/Users/steffoz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/steffoz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/steffoz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered searches/index.html.slim within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (/Users/steffoz/dev/visible_tweets/app/views/searches/index.html.slim:3: syntax error, unexpected '=', expecting keyword_end
+..._compiler2 = dom_class(search)=; case (_slim_compiler2); whe...
+...                               ^):
+    1: ul
+    2:   - @searches.each do |search|
+    3:     li id=dom_id(search) class=dom_class(search)= search.query
+  
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-05 15:30:16 +0200
+  Processing by SearchesController#index as HTML
+ERROR: compiling _app_views_searches_index_html_slim___4171663370383599734_2157395060 RAISED /Users/steffoz/dev/visible_tweets/app/views/searches/index.html.slim:3: syntax error, unexpected '=', expecting keyword_end
+..._compiler2 = dom_class(search)=; case (_slim_compiler2); whe...
+...                               ^
+Function body:           def _app_views_searches_index_html_slim___4171663370383599734_2157395060(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "searches/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActiveSupport::SafeBuffer.new; @output_buffer.safe_concat(("<ul>")); 
+; @searches.each do |search|; 
+; @output_buffer.safe_concat(("<li")); _temple_html_attributemerger1 = ActiveSupport::SafeBuffer.new; _slim_compiler2 = dom_class(search)=; case (_slim_compiler2); when true; _temple_html_attributemerger1.safe_concat(("class")); when false, nil; else; _temple_html_attributemerger1.safe_concat(((::Temple::Utils.escape_html_safe((_slim_compiler2.respond_to?(:join) ? _slim_compiler2.flatten.compact.join(" ") : _slim_compiler2))).to_s)); end; _temple_html_attributemerger1; if !_temple_html_attributemerger1.empty?; @output_buffer.safe_concat((" class=\"")); @output_buffer.safe_concat(((_temple_html_attributemerger1).to_s)); @output_buffer.safe_concat(("\"")); end; _temple_html_attributemerger2 = ActiveSupport::SafeBuffer.new; _slim_compiler1 = dom_id(search); case (_slim_compiler1); when true; _temple_html_attributemerger2.safe_concat(("id")); when false, nil; else; _temple_html_attributemerger2.safe_concat(((::Temple::Utils.escape_html_safe((dom_id(search)))).to_s)); end; _temple_html_attributemerger2; if !_temple_html_attributemerger2.empty?; @output_buffer.safe_concat((" id=\"")); @output_buffer.safe_concat(((_temple_html_attributemerger2).to_s)); @output_buffer.safe_concat(("\"")); end; @output_buffer.safe_concat((">search.query</li>")); 
+; end; @output_buffer.safe_concat(("</ul>")); @output_buffer
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `module_eval'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `compile'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/template.rb:190:in `compile!'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/template.rb:143:in `block in render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/notifications.rb:55:in `instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/template.rb:142:in `render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:40:in `block (2 levels) in render_template'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:33:in `block in instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `block in instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:39:in `block in render_template'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:47:in `render_with_layout'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:99:in `render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/steffoz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/mime_responds.rb:268:in `block in retrieve_response_from_mimes'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/responder.rb:231:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/responder.rb:231:in `default_render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/responder.rb:160:in `to_html'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/responders-0.6.4/lib/responders/flash_responder.rb:93:in `to_html'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/responder.rb:153:in `respond'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/responder.rb:146:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/mime_responds.rb:238:in `respond_with'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/inherited_resources-1.3.0/lib/inherited_resources/actions.rb:7:in `index'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:416:in `_run__3628721680945725802__process_action__2542953813183622221__callbacks'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `block in instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:121:in `process'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal.rb:193:in `dispatch'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal.rb:236:in `block in action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:29:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `block in call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:531:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/etag.rb:23:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/flash.rb:243:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/session/abstract/id.rb:195:in `context'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/session/abstract/id.rb:190:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/cookies.rb:326:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activerecord-3.1.0/lib/active_record/query_cache.rb:62:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activerecord-3.1.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/sendfile.rb:101:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/railties-3.1.0/lib/rails/rack/logger.rb:13:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/methodoverride.rb:24:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/runtime.rb:17:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/lock.rb:15:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/static.rb:53:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/railties-3.1.0/lib/rails/engine.rb:455:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/railties-3.1.0/lib/rails/rack/content_length.rb:16:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/railties-3.1.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/handler/webrick.rb:59:in `service'
+/Users/steffoz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/steffoz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/steffoz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered searches/index.html.slim within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 37ms
+
+ActionView::Template::Error (/Users/steffoz/dev/visible_tweets/app/views/searches/index.html.slim:3: syntax error, unexpected '=', expecting keyword_end
+..._compiler2 = dom_class(search)=; case (_slim_compiler2); whe...
+...                               ^):
+    1: ul
+    2:   - @searches.each do |search|
+    3:     li id=dom_id(search) class=dom_class(search)= search.query
+  
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-05 15:30:16 +0200
+  Processing by SearchesController#index as */*
+ERROR: compiling _app_views_searches_index_html_slim___4171663370383599734_2157395060 RAISED /Users/steffoz/dev/visible_tweets/app/views/searches/index.html.slim:3: syntax error, unexpected '=', expecting keyword_end
+..._compiler2 = dom_class(search)=; case (_slim_compiler2); whe...
+...                               ^
+Function body:           def _app_views_searches_index_html_slim___4171663370383599734_2157395060(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "searches/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActiveSupport::SafeBuffer.new; @output_buffer.safe_concat(("<ul>")); 
+; @searches.each do |search|; 
+; @output_buffer.safe_concat(("<li")); _temple_html_attributemerger1 = ActiveSupport::SafeBuffer.new; _slim_compiler2 = dom_class(search)=; case (_slim_compiler2); when true; _temple_html_attributemerger1.safe_concat(("class")); when false, nil; else; _temple_html_attributemerger1.safe_concat(((::Temple::Utils.escape_html_safe((_slim_compiler2.respond_to?(:join) ? _slim_compiler2.flatten.compact.join(" ") : _slim_compiler2))).to_s)); end; _temple_html_attributemerger1; if !_temple_html_attributemerger1.empty?; @output_buffer.safe_concat((" class=\"")); @output_buffer.safe_concat(((_temple_html_attributemerger1).to_s)); @output_buffer.safe_concat(("\"")); end; _temple_html_attributemerger2 = ActiveSupport::SafeBuffer.new; _slim_compiler1 = dom_id(search); case (_slim_compiler1); when true; _temple_html_attributemerger2.safe_concat(("id")); when false, nil; else; _temple_html_attributemerger2.safe_concat(((::Temple::Utils.escape_html_safe((dom_id(search)))).to_s)); end; _temple_html_attributemerger2; if !_temple_html_attributemerger2.empty?; @output_buffer.safe_concat((" id=\"")); @output_buffer.safe_concat(((_temple_html_attributemerger2).to_s)); @output_buffer.safe_concat(("\"")); end; @output_buffer.safe_concat((">search.query</li>")); 
+; end; @output_buffer.safe_concat(("</ul>")); @output_buffer
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `module_eval'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `compile'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/template.rb:190:in `compile!'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/template.rb:143:in `block in render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/notifications.rb:55:in `instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/template.rb:142:in `render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:40:in `block (2 levels) in render_template'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:33:in `block in instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `block in instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:39:in `block in render_template'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:47:in `render_with_layout'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:99:in `render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/steffoz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/mime_responds.rb:268:in `block in retrieve_response_from_mimes'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/responder.rb:231:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/responder.rb:231:in `default_render'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/responder.rb:160:in `to_html'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/responders-0.6.4/lib/responders/flash_responder.rb:93:in `to_html'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/responder.rb:153:in `respond'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/responder.rb:146:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/mime_responds.rb:238:in `respond_with'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/inherited_resources-1.3.0/lib/inherited_resources/actions.rb:7:in `index'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:416:in `_run__3628721680945725802__process_action__2542953813183622221__callbacks'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `block in instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `instrument'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:121:in `process'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal.rb:193:in `dispatch'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_controller/metal.rb:236:in `block in action'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:29:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `block in call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:531:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/etag.rb:23:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/flash.rb:243:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/session/abstract/id.rb:195:in `context'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/session/abstract/id.rb:190:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/cookies.rb:326:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activerecord-3.1.0/lib/active_record/query_cache.rb:62:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activerecord-3.1.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/sendfile.rb:101:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/railties-3.1.0/lib/rails/rack/logger.rb:13:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/methodoverride.rb:24:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/runtime.rb:17:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/activesupport-3.1.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/lock.rb:15:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/static.rb:53:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/railties-3.1.0/lib/rails/engine.rb:455:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/railties-3.1.0/lib/rails/rack/content_length.rb:16:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/railties-3.1.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/rack-1.3.2/lib/rack/handler/webrick.rb:59:in `service'
+/Users/steffoz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/steffoz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/steffoz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered searches/index.html.slim within layouts/application (38.0ms)
+Completed 500 Internal Server Error in 49ms
+
+ActionView::Template::Error (/Users/steffoz/dev/visible_tweets/app/views/searches/index.html.slim:3: syntax error, unexpected '=', expecting keyword_end
+..._compiler2 = dom_class(search)=; case (_slim_compiler2); whe...
+...                               ^):
+    1: ul
+    2:   - @searches.each do |search|
+    3:     li id=dom_id(search) class=dom_class(search)= search.query
+  
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (22.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-05 15:30:21 +0200
+  Processing by SearchesController#index as HTML
+  [1m[36mSearch Load (0.3ms)[0m  [1mSELECT `searches`.* FROM `searches` LIMIT 10 OFFSET 0[0m
+Rendered searches/index.html.slim within layouts/application (4.3ms)
+Completed 200 OK in 59ms (Views: 57.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-05 15:30:21 +0200
+  Processing by SearchesController#index as */*
+  [1m[35mSearch Load (0.3ms)[0m  SELECT `searches`.* FROM `searches` LIMIT 10 OFFSET 0
+Rendered searches/index.html.slim within layouts/application (2.1ms)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 15:30:22 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (72ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 15:30:22 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 15:30:22 +0200
+Served asset /jquery.js - 304 Not Modified (64ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 15:30:22 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-05 15:30:23 +0200
+  Processing by SearchesController#index as HTML
+  [1m[36mSearch Load (0.2ms)[0m  [1mSELECT `searches`.* FROM `searches` LIMIT 10 OFFSET 0[0m
+Rendered searches/index.html.slim within layouts/application (1.6ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-05 15:30:23 +0200
+  Processing by SearchesController#index as */*
+  [1m[35mSearch Load (0.3ms)[0m  SELECT `searches`.* FROM `searches` LIMIT 10 OFFSET 0
+Rendered searches/index.html.slim within layouts/application (2.0ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 15:30:23 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 15:30:23 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 15:30:23 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 15:30:23 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:37:39 +0200
+  Processing by SearchesController#index as HTML
+  [1m[36mSearch Load (0.3ms)[0m  [1mSELECT `searches`.* FROM `searches` LIMIT 10 OFFSET 0[0m
+Rendered searches/index.html.slim within layouts/application (2.9ms)
+Compiled application.css  (91ms)  (pid 26192)
+Completed 200 OK in 188ms (Views: 185.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:37:39 +0200
+  Processing by SearchesController#index as */*
+  [1m[35mSearch Load (0.2ms)[0m  SELECT `searches`.* FROM `searches` LIMIT 10 OFFSET 0
+Rendered searches/index.html.slim within layouts/application (1.7ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 15:37:40 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 15:37:40 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 15:37:40 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 15:37:40 +0200
+Served asset /application.css - 304 Not Modified (24ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-05 15:38:16 +0200
+  Processing by SearchesController#index as HTML
+  [1m[36mSearch Load (0.3ms)[0m  [1mSELECT `searches`.* FROM `searches` LIMIT 10 OFFSET 0[0m
+Rendered searches/index.html.slim within layouts/application (3.3ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-05 15:38:16 +0200
+  Processing by SearchesController#index as */*
+  [1m[35mSearch Load (0.3ms)[0m  SELECT `searches`.* FROM `searches` LIMIT 10 OFFSET 0
+Rendered searches/index.html.slim within layouts/application (7.9ms)
+Completed 200 OK in 28ms (Views: 19.9ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 15:38:17 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 15:38:17 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 15:38:17 +0200
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 15:38:17 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 15:38:25 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2011-09-05 15:38:25 +0200
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 15:38:27 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2011-09-05 15:38:27 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 15:38:37 +0200
+Compiled application.css  (1ms)  (pid 26192)
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2011-09-05 15:38:37 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 15:38:39 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2011-09-05 15:38:39 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 15:38:39 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2011-09-05 15:38:40 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 15:38:44 +0200
+Compiled application.css  (2ms)  (pid 26192)
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2011-09-05 15:38:44 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 15:38:47 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2011-09-05 15:38:47 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 15:39:38 +0200
+Compiled application.css  (3ms)  (pid 26192)
+Compiled reset.css  (0ms)  (pid 26192)
+Served asset /application.css - 200 OK (17ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2011-09-05 15:39:38 +0200
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-05 15:39:44 +0200
+  Processing by SearchesController#index as HTML
+  [1m[36mSearch Load (0.4ms)[0m  [1mSELECT `searches`.* FROM `searches` LIMIT 10 OFFSET 0[0m
+Rendered searches/index.html.slim within layouts/application (1.7ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-05 15:39:44 +0200
+  Processing by SearchesController#index as */*
+  [1m[35mSearch Load (0.2ms)[0m  SELECT `searches`.* FROM `searches` LIMIT 10 OFFSET 0
+Rendered searches/index.html.slim within layouts/application (3.3ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2011-09-05 15:39:44 +0200
+Served asset /reset.css - 200 OK (18ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 15:39:44 +0200
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 15:39:44 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 15:39:44 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 15:39:44 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 15:39:52 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2011-09-05 15:39:52 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 15:39:54 +0200
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2011-09-05 15:39:54 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:41:54 +0200
+  Processing by SearchesController#index as HTML
+  [1m[36mSearch Load (0.2ms)[0m  [1mSELECT `searches`.* FROM `searches` LIMIT 10 OFFSET 0[0m
+Rendered searches/index.html.slim within layouts/application (1.5ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:41:54 +0200
+  Processing by SearchesController#index as */*
+  [1m[35mSearch Load (0.2ms)[0m  SELECT `searches`.* FROM `searches` LIMIT 10 OFFSET 0
+Rendered searches/index.html.slim within layouts/application (1.8ms)
+Completed 200 OK in 17ms (Views: 12.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 15:41:54 +0200
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 15:41:54 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2011-09-05 15:41:54 +0200
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 15:41:54 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 15:41:54 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:43:22 +0200
+  Processing by SearchesController#index as HTML
+  [1m[36mSearch Load (0.2ms)[0m  [1mSELECT `searches`.* FROM `searches` LIMIT 10 OFFSET 0[0m
+Rendered searches/index.html.slim within layouts/application (2.9ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:43:22 +0200
+  Processing by SearchesController#index as */*
+  [1m[35mSearch Load (0.3ms)[0m  SELECT `searches`.* FROM `searches` LIMIT 10 OFFSET 0
+Rendered searches/index.html.slim within layouts/application (1.6ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2011-09-05 15:43:22 +0200
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 15:43:22 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 15:43:22 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 15:43:22 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 15:43:22 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:46:07 +0200
+  Processing by SearchesController#index as HTML
+  [1m[36mSearch Load (0.6ms)[0m  [1mSELECT `searches`.* FROM `searches` LIMIT 10 OFFSET 0[0m
+Rendered searches/index.html.slim within layouts/application (9.3ms)
+Completed 200 OK in 27ms (Views: 21.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:46:07 +0200
+  Processing by SearchesController#index as */*
+  [1m[35mSearch Load (0.3ms)[0m  SELECT `searches`.* FROM `searches` LIMIT 10 OFFSET 0
+Rendered searches/index.html.slim within layouts/application (4.4ms)
+Completed 200 OK in 50ms (Views: 11.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2011-09-05 15:46:07 +0200
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 15:46:07 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 15:46:07 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 15:46:07 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 15:46:07 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:46:37 +0200
+  Processing by SearchesController#index as HTML
+  [1m[36mSearch Load (0.7ms)[0m  [1mSELECT `searches`.* FROM `searches` LIMIT 10 OFFSET 0[0m
+Rendered searches/index.html.slim within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 23ms
+
+ActionView::Template::Error (Undefined mixin 'button'.
+  (in /Users/steffoz/dev/visible_tweets/app/assets/stylesheets/application.css.sass)):
+    2: html
+    3:   head
+    4:     title Visible Tweets
+    5:     = stylesheet_link_tag "application"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   body
+  app/assets/stylesheets/application.css.sass:4:in `button'
+  app/assets/stylesheets/application.css.sass:4
+  app/views/layouts/application.html.slim:5:in `_app_views_layouts_application_html_slim__2159298064391229035_2154302680'
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.0ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:46:38 +0200
+  Processing by SearchesController#index as */*
+  [1m[35mSearch Load (0.4ms)[0m  SELECT `searches`.* FROM `searches` LIMIT 10 OFFSET 0
+Rendered searches/index.html.slim within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 40ms
+
+ActionView::Template::Error (Undefined mixin 'button'.
+  (in /Users/steffoz/dev/visible_tweets/app/assets/stylesheets/application.css.sass)):
+    2: html
+    3:   head
+    4:     title Visible Tweets
+    5:     = stylesheet_link_tag "application"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   body
+  app/assets/stylesheets/application.css.sass:4:in `button'
+  app/assets/stylesheets/application.css.sass:4
+  app/views/layouts/application.html.slim:5:in `_app_views_layouts_application_html_slim__2159298064391229035_2154302680'
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.5ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:47:13 +0200
+  Processing by SearchesController#index as HTML
+  [1m[36mSearch Load (0.3ms)[0m  [1mSELECT `searches`.* FROM `searches` LIMIT 10 OFFSET 0[0m
+Rendered searches/index.html.slim within layouts/application (3.7ms)
+Compiled application.css  (672ms)  (pid 26192)
+Completed 200 OK in 694ms (Views: 692.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:47:14 +0200
+  Processing by SearchesController#index as */*
+  [1m[35mSearch Load (0.2ms)[0m  SELECT `searches`.* FROM `searches` LIMIT 10 OFFSET 0
+Rendered searches/index.html.slim within layouts/application (2.3ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 15:47:14 +0200
+Served asset /application.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 15:47:14 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 15:47:14 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 15:47:14 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:47:23 +0200
+  Processing by SearchesController#index as HTML
+  [1m[36mSearch Load (0.2ms)[0m  [1mSELECT `searches`.* FROM `searches` LIMIT 10 OFFSET 0[0m
+Rendered searches/index.html.slim within layouts/application (2.2ms)
+Compiled application.css  (173ms)  (pid 26192)
+Completed 200 OK in 195ms (Views: 193.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:47:24 +0200
+  Processing by SearchesController#index as */*
+  [1m[35mSearch Load (0.2ms)[0m  SELECT `searches`.* FROM `searches` LIMIT 10 OFFSET 0
+Rendered searches/index.html.slim within layouts/application (2.5ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 15:47:24 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 15:47:24 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 15:47:24 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 15:47:24 +0200
+Served asset /application.css - 200 OK (5ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:47:46 +0200
+  Processing by SearchesController#index as HTML
+  [1m[36mSearch Load (0.3ms)[0m  [1mSELECT `searches`.* FROM `searches` LIMIT 10 OFFSET 0[0m
+Rendered searches/index.html.slim within layouts/application (3.0ms)
+Compiled application.css  (205ms)  (pid 26192)
+Completed 200 OK in 230ms (Views: 226.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:47:46 +0200
+  Processing by SearchesController#index as */*
+  [1m[35mSearch Load (0.3ms)[0m  SELECT `searches`.* FROM `searches` LIMIT 10 OFFSET 0
+Rendered searches/index.html.slim within layouts/application (2.8ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 15:47:47 +0200
+Served asset /application.css - 200 OK (16ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 15:47:47 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 15:47:47 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 15:47:47 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/searches/new" for 127.0.0.1 at 2011-09-05 15:47:52 +0200
+  Processing by SearchesController#new as HTML
+Completed 500 Internal Server Error in 40ms
+
+ActionView::MissingTemplate (Missing template searches/new, application/new with {:handlers=>[:erb, :builder, :slim, :coffee], :formats=>[:html], :locale=>[:en, :en]}. Searched in:
+  * "/Users/steffoz/dev/visible_tweets/app/views"
+  * "/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/kaminari-0.12.4/app/views"
+):
+  
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.6ms)
+
+
+Started GET "/searches/new" for 127.0.0.1 at 2011-09-05 15:47:52 +0200
+  Processing by SearchesController#new as */*
+Completed 500 Internal Server Error in 31ms
+
+ActionView::MissingTemplate (Missing template searches/new, application/new with {:handlers=>[:erb, :builder, :slim, :coffee], :formats=>[:html], :locale=>[:en, :en]}. Searched in:
+  * "/Users/steffoz/dev/visible_tweets/app/views"
+  * "/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/kaminari-0.12.4/app/views"
+):
+  
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.6ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:48:29 +0200
+  Processing by SearchesController#index as HTML
+  [1m[36mSearch Load (0.3ms)[0m  [1mSELECT `searches`.* FROM `searches` LIMIT 10 OFFSET 0[0m
+  [1m[35m (52.2ms)[0m  SELECT COUNT(*) FROM `searches` 
+Rendered searches/index.html.slim within layouts/application (159.6ms)
+Completed 200 OK in 180ms (Views: 126.2ms | ActiveRecord: 53.1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 15:48:29 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 15:48:29 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 15:48:29 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:48:54 +0200
+  Processing by SearchesController#index as HTML
+  [1m[36mSearch Load (0.3ms)[0m  [1mSELECT `searches`.* FROM `searches` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `searches` 
+Rendered searches/index.html.slim within layouts/application (8.6ms)
+Compiled application.css  (177ms)  (pid 26192)
+Completed 200 OK in 211ms (Views: 209.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 15:48:54 +0200
+  Processing by SearchesController#index as */*
+  [1m[36mSearch Load (0.2ms)[0m  [1mSELECT `searches`.* FROM `searches` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `searches` 
+Rendered searches/index.html.slim within layouts/application (23.4ms)
+Completed 200 OK in 87ms (Views: 81.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 15:48:55 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 15:48:55 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 15:48:55 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 15:48:55 +0200
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/searches/new" for 127.0.0.1 at 2011-09-05 15:52:51 +0200
+  Processing by SearchesController#new as HTML
+Completed 500 Internal Server Error in 12ms
+
+ActionView::MissingTemplate (Missing template searches/new, application/new with {:handlers=>[:erb, :builder, :slim, :coffee], :formats=>[:html], :locale=>[:en, :en]}. Searched in:
+  * "/Users/steffoz/dev/visible_tweets/app/views"
+  * "/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/kaminari-0.12.4/app/views"
+):
+  
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.5ms)
+
+
+Started GET "/searches/new" for 127.0.0.1 at 2011-09-05 15:52:51 +0200
+  Processing by SearchesController#new as */*
+Completed 500 Internal Server Error in 75ms
+
+ActionView::MissingTemplate (Missing template searches/new, application/new with {:handlers=>[:erb, :builder, :slim, :coffee], :formats=>[:html], :locale=>[:en, :en]}. Searched in:
+  * "/Users/steffoz/dev/visible_tweets/app/views"
+  * "/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/kaminari-0.12.4/app/views"
+):
+  
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.5ms)
+
+
+Started GET "/searches/new" for 127.0.0.1 at 2011-09-05 16:03:45 +0200
+
+ActionController::RoutingError (No route matches [GET] "/searches/new"):
+  
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (22.9ms)
+
+
+Started GET "/searches/new" for 127.0.0.1 at 2011-09-05 16:03:46 +0200
+
+ActionController::RoutingError (No route matches [GET] "/searches/new"):
+  
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 16:03:48 +0200
+
+ActionController::RoutingError (No route matches [GET] "/searches"):
+  
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 16:03:49 +0200
+
+ActionController::RoutingError (No route matches [GET] "/searches"):
+  
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 16:06:48 +0200
+
+ActionController::RoutingError (No route matches [GET] "/searches"):
+  
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 16:06:48 +0200
+
+ActionController::RoutingError (No route matches [GET] "/searches"):
+  
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.9ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 16:06:49 +0200
+
+ActionController::RoutingError (No route matches [GET] "/searches"):
+  
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/searches" for 127.0.0.1 at 2011-09-05 16:06:49 +0200
+
+ActionController::RoutingError (No route matches [GET] "/searches"):
+  
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2011-09-05 16:06:54 +0200
+
+ActionController::RoutingError (No route matches [GET] "/resources"):
+  
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.2ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2011-09-05 16:06:54 +0200
+
+ActionController::RoutingError (No route matches [GET] "/resources"):
+  
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:07:00 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (0.4ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Rendered application/index.html.slim within layouts/application (74.4ms)
+Compiled reset.css  (0ms)  (pid 33921)
+Compiled application.css  (397ms)  (pid 33921)
+Completed 200 OK in 746ms (Views: 743.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:07:01 +0200
+  Processing by SubscriptionsController#index as */*
+  [1m[36mSubscription Load (0.4ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Rendered application/index.html.slim within layouts/application (10.2ms)
+Completed 200 OK in 26ms (Views: 20.6ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 16:07:01 +0200
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 16:07:01 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (37ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 16:07:01 +0200
+Served asset /application.css - 200 OK (51ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 16:07:01 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:08:57 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (0.2ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Rendered application/index.html.slim within layouts/application (8.6ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:08:57 +0200
+  Processing by SubscriptionsController#index as */*
+  [1m[36mSubscription Load (0.2ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Rendered application/index.html.slim within layouts/application (12.2ms)
+Completed 200 OK in 50ms (Views: 45.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 16:08:57 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 16:08:57 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 16:08:57 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 16:08:57 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:09:00 +0200
+  Processing by SubscriptionsController#new as HTML
+Completed 500 Internal Server Error in 52ms
+
+ActionView::MissingTemplate (Missing template subscriptions/new, application/new with {:handlers=>[:erb, :builder, :slim, :coffee], :formats=>[:html], :locale=>[:it, :it]}. Searched in:
+  * "/Users/steffoz/dev/visible_tweets/app/views"
+  * "/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/kaminari-0.12.4/app/views"
+):
+  
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.3ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:09:00 +0200
+  Processing by SubscriptionsController#new as */*
+Completed 500 Internal Server Error in 40ms
+
+ActionView::MissingTemplate (Missing template subscriptions/new, application/new with {:handlers=>[:erb, :builder, :slim, :coffee], :formats=>[:html], :locale=>[:it, :it]}. Searched in:
+  * "/Users/steffoz/dev/visible_tweets/app/views"
+  * "/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/kaminari-0.12.4/app/views"
+):
+  
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.5ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:10:09 +0200
+  Processing by SubscriptionsController#new as HTML
+Rendered application/new.html.slim within layouts/application (1.8ms)
+Completed 200 OK in 20ms (Views: 12.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:10:09 +0200
+  Processing by SubscriptionsController#new as */*
+Rendered application/new.html.slim within layouts/application (0.7ms)
+Completed 200 OK in 16ms (Views: 10.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 16:10:09 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 16:10:09 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 16:10:09 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 16:10:09 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:11:17 +0200
+  Processing by SubscriptionsController#new as HTML
+Rendered application/new.html.slim within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 19ms
+
+ActionView::Template::Error (Missing partial subscriptions/form, application/form with {:handlers=>[:erb, :builder, :slim, :coffee], :formats=>[:html], :locale=>[:it, :it]}. Searched in:
+  * "/Users/steffoz/dev/visible_tweets/app/views"
+  * "/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/kaminari-0.12.4/app/views"
+):
+    1: h1= i18n_create(resource_class)
+    2: 
+    3: = render "form", :resource => resource
+  app/views/application/new.html.slim:3:in `_app_views_application_new_html_slim___44640702131992287_2174213460'
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.3ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:11:17 +0200
+  Processing by SubscriptionsController#new as */*
+Rendered application/new.html.slim within layouts/application (21.3ms)
+Completed 500 Internal Server Error in 249ms
+
+ActionView::Template::Error (Missing partial subscriptions/form, application/form with {:handlers=>[:erb, :builder, :slim, :coffee], :formats=>[:html], :locale=>[:it, :it]}. Searched in:
+  * "/Users/steffoz/dev/visible_tweets/app/views"
+  * "/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/kaminari-0.12.4/app/views"
+):
+    1: h1= i18n_create(resource_class)
+    2: 
+    3: = render "form", :resource => resource
+  app/views/application/new.html.slim:3:in `_app_views_application_new_html_slim___44640702131992287_2174213460'
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.3ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.2ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:11:24 +0200
+  Processing by SubscriptionsController#new as HTML
+Rendered subscriptions/_form.html.slim (165.2ms)
+Rendered application/new.html.slim within layouts/application (166.8ms)
+Completed 500 Internal Server Error in 178ms
+
+ActionView::Template::Error (undefined method `input' for #<ActionView::Helpers::FormBuilder:0x0000010580bd98>):
+    1: = form_for resource do |form|
+    2:   = form.input :query
+    3:   = form.submit
+  app/views/subscriptions/_form.html.slim:2:in `block in _app_views_subscriptions__form_html_slim___1790156060755726186_2193779680'
+  app/views/subscriptions/_form.html.slim:1:in `_app_views_subscriptions__form_html_slim___1790156060755726186_2193779680'
+  app/views/application/new.html.slim:3:in `_app_views_application_new_html_slim___44640702131992287_2174213460'
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.1ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:11:24 +0200
+  Processing by SubscriptionsController#new as */*
+Rendered subscriptions/_form.html.slim (313.6ms)
+Rendered application/new.html.slim within layouts/application (315.5ms)
+Completed 500 Internal Server Error in 535ms
+
+ActionView::Template::Error (undefined method `input' for #<ActionView::Helpers::FormBuilder:0x00000105958e30>):
+    1: = form_for resource do |form|
+    2:   = form.input :query
+    3:   = form.submit
+  app/views/subscriptions/_form.html.slim:2:in `block in _app_views_subscriptions__form_html_slim___1790156060755726186_2193779680'
+  app/views/subscriptions/_form.html.slim:1:in `_app_views_subscriptions__form_html_slim___1790156060755726186_2193779680'
+  app/views/application/new.html.slim:3:in `_app_views_application_new_html_slim___44640702131992287_2174213460'
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.6ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:13:02 +0200
+  Processing by SubscriptionsController#new as HTML
+Rendered subscriptions/_form.html.slim (222.3ms)
+Rendered application/new.html.slim within layouts/application (257.9ms)
+Completed 500 Internal Server Error in 352ms
+
+ActionView::Template::Error (undefined method `input' for #<ActionView::Helpers::FormBuilder:0x00000101329bf8>):
+    1: = form_for resource do |form|
+    2:   = form.input :query
+    3:   = form.submit
+  app/views/subscriptions/_form.html.slim:2:in `block in _app_views_subscriptions__form_html_slim__2985658358085837953_2157876540'
+  app/views/subscriptions/_form.html.slim:1:in `_app_views_subscriptions__form_html_slim__2985658358085837953_2157876540'
+  app/views/application/new.html.slim:3:in `_app_views_application_new_html_slim___2872666644316149900_2158370060'
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.3ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:13:04 +0200
+  Processing by SubscriptionsController#new as */*
+Rendered subscriptions/_form.html.slim (286.1ms)
+Rendered application/new.html.slim within layouts/application (290.5ms)
+Completed 500 Internal Server Error in 313ms
+
+ActionView::Template::Error (undefined method `input' for #<ActionView::Helpers::FormBuilder:0x000001015cbe88>):
+    1: = form_for resource do |form|
+    2:   = form.input :query
+    3:   = form.submit
+  app/views/subscriptions/_form.html.slim:2:in `block in _app_views_subscriptions__form_html_slim__2985658358085837953_2157876540'
+  app/views/subscriptions/_form.html.slim:1:in `_app_views_subscriptions__form_html_slim__2985658358085837953_2157876540'
+  app/views/application/new.html.slim:3:in `_app_views_application_new_html_slim___2872666644316149900_2158370060'
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.4ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:13:27 +0200
+  Processing by SubscriptionsController#new as HTML
+Rendered subscriptions/_form.html.slim (192.8ms)
+Rendered application/new.html.slim within layouts/application (194.6ms)
+Completed 500 Internal Server Error in 207ms
+
+ActionView::Template::Error (undefined method `input' for #<ActionView::Helpers::FormBuilder:0x000001010986a0>):
+    1: = form_for resource do |form|
+    2:   = form.input :query
+    3:   = form.submit
+  app/views/subscriptions/_form.html.slim:2:in `block in _app_views_subscriptions__form_html_slim__2985658358085837953_2157876540'
+  app/views/subscriptions/_form.html.slim:1:in `_app_views_subscriptions__form_html_slim__2985658358085837953_2157876540'
+  app/views/application/new.html.slim:3:in `_app_views_application_new_html_slim___2872666644316149900_2158370060'
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.8ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:13:27 +0200
+  Processing by SubscriptionsController#new as */*
+Rendered subscriptions/_form.html.slim (299.6ms)
+Rendered application/new.html.slim within layouts/application (301.6ms)
+Completed 500 Internal Server Error in 327ms
+
+ActionView::Template::Error (undefined method `input' for #<ActionView::Helpers::FormBuilder:0x000001016e21a0>):
+    1: = form_for resource do |form|
+    2:   = form.input :query
+    3:   = form.submit
+  app/views/subscriptions/_form.html.slim:2:in `block in _app_views_subscriptions__form_html_slim__2985658358085837953_2157876540'
+  app/views/subscriptions/_form.html.slim:1:in `_app_views_subscriptions__form_html_slim__2985658358085837953_2157876540'
+  app/views/application/new.html.slim:3:in `_app_views_application_new_html_slim___2872666644316149900_2158370060'
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.7ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.5ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:13:39 +0200
+  Processing by SubscriptionsController#new as HTML
+Rendered subscriptions/_form.html.slim (533.2ms)
+Rendered application/new.html.slim within layouts/application (535.1ms)
+Completed 200 OK in 609ms (Views: 605.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:13:39 +0200
+  Processing by SubscriptionsController#new as */*
+Rendered subscriptions/_form.html.slim (11.8ms)
+Rendered application/new.html.slim within layouts/application (13.7ms)
+Completed 200 OK in 38ms (Views: 28.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 16:13:40 +0200
+Served asset /jquery.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 16:13:40 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 16:13:40 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 16:13:40 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:23:53 +0200
+  Processing by SubscriptionsController#new as HTML
+Rendered subscriptions/_form.html.slim (273.1ms)
+Rendered application/new.html.slim within layouts/application (311.4ms)
+Completed 200 OK in 402ms (Views: 396.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:23:55 +0200
+  Processing by SubscriptionsController#new as */*
+Rendered subscriptions/_form.html.slim (16.4ms)
+Rendered application/new.html.slim within layouts/application (18.0ms)
+Completed 200 OK in 39ms (Views: 34.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 16:23:55 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 16:23:55 +0200
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 16:23:55 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 16:23:55 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-05 16:23:57 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (0.3ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Rendered application/index.html.slim within layouts/application (15.0ms)
+Completed 200 OK in 26ms (Views: 23.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-05 16:23:57 +0200
+  Processing by SubscriptionsController#index as */*
+  [1m[36mSubscription Load (1.2ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Rendered application/index.html.slim within layouts/application (37.7ms)
+Completed 200 OK in 65ms (Views: 33.0ms | ActiveRecord: 30.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 16:23:57 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 16:23:57 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 16:23:57 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 16:23:57 +0200
+Served asset /application.css - 200 OK (37ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:24:00 +0200
+  Processing by SubscriptionsController#new as HTML
+Rendered subscriptions/_form.html.slim (10.3ms)
+Rendered application/new.html.slim within layouts/application (11.7ms)
+Completed 200 OK in 68ms (Views: 62.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:24:01 +0200
+  Processing by SubscriptionsController#new as */*
+Rendered subscriptions/_form.html.slim (31.8ms)
+Rendered application/new.html.slim within layouts/application (33.4ms)
+Completed 200 OK in 53ms (Views: 47.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 16:24:01 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 16:24:01 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 16:24:01 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:24:24 +0200
+  Processing by SubscriptionsController#new as HTML
+Rendered subscriptions/_form.html.slim (10.2ms)
+Rendered application/new.html.slim within layouts/application (13.6ms)
+Completed 200 OK in 31ms (Views: 25.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:24:24 +0200
+  Processing by SubscriptionsController#new as */*
+Rendered subscriptions/_form.html.slim (12.3ms)
+Rendered application/new.html.slim within layouts/application (15.1ms)
+Completed 200 OK in 30ms (Views: 25.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 16:24:24 +0200
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 16:24:24 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 16:24:24 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 16:24:24 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:24:40 +0200
+  Processing by SubscriptionsController#new as HTML
+Rendered subscriptions/_form.html.slim (19.7ms)
+Rendered application/new.html.slim within layouts/application (26.4ms)
+Completed 200 OK in 52ms (Views: 46.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:24:40 +0200
+  Processing by SubscriptionsController#new as */*
+Rendered subscriptions/_form.html.slim (10.9ms)
+Rendered application/new.html.slim within layouts/application (12.3ms)
+Completed 200 OK in 34ms (Views: 27.8ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 16:24:40 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 16:24:40 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 16:24:40 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 16:24:40 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/subscriptions" for 127.0.0.1 at 2011-09-05 16:24:43 +0200
+  Processing by SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r5/KiLvmPGHKRr/eTdFY4y7fkIO+isSKUr3tqbd90MM=", "subscription"=>{"query"=>"sdassd"}, "commit"=>"Crea Sottoscrizione"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'sdassd' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:24:43', 'sdassd', '2011-09-05 14:24:43')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/subscriptions/1
+Completed 302 Found in 155ms
+
+
+Started GET "/subscriptions/1" for 127.0.0.1 at 2011-09-05 16:24:43 +0200
+  Processing by SubscriptionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubscription Load (0.4ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` WHERE `subscriptions`.`id` = 1 LIMIT 1[0m
+Rendered subscriptions/_resource.html.slim (42.7ms)
+Rendered application/show.html.slim within layouts/application (45.5ms)
+Completed 200 OK in 61ms (Views: 55.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/subscriptions/1" for 127.0.0.1 at 2011-09-05 16:24:44 +0200
+  Processing by SubscriptionsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[35mSubscription Load (0.3ms)[0m  SELECT `subscriptions`.* FROM `subscriptions` WHERE `subscriptions`.`id` = 1 LIMIT 1
+Rendered subscriptions/_resource.html.slim (4.5ms)
+Rendered application/show.html.slim within layouts/application (6.0ms)
+Completed 200 OK in 78ms (Views: 21.8ms | ActiveRecord: 37.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 16:24:44 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 16:24:44 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 16:24:44 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 16:24:44 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/subscriptions/1" for 127.0.0.1 at 2011-09-05 16:27:19 +0200
+  Processing by SubscriptionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubscription Load (3.1ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` WHERE `subscriptions`.`id` = 1 LIMIT 1[0m
+Rendered subscriptions/_resource.html.slim (4.0ms)
+Rendered application/show.html.slim within layouts/application (7.4ms)
+Completed 200 OK in 37ms (Views: 27.3ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/subscriptions/1" for 127.0.0.1 at 2011-09-05 16:27:19 +0200
+  Processing by SubscriptionsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[35mSubscription Load (0.4ms)[0m  SELECT `subscriptions`.* FROM `subscriptions` WHERE `subscriptions`.`id` = 1 LIMIT 1
+Rendered subscriptions/_resource.html.slim (6.7ms)
+Rendered application/show.html.slim within layouts/application (8.4ms)
+Completed 200 OK in 145ms (Views: 82.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 16:27:19 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 16:27:19 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 16:27:19 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 16:27:19 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/subscriptions/" for 127.0.0.1 at 2011-09-05 16:27:21 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (0.3ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (2.3ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Rendered application/index.html.slim within layouts/application (16.5ms)
+Completed 200 OK in 27ms (Views: 21.0ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/subscriptions/" for 127.0.0.1 at 2011-09-05 16:27:21 +0200
+  Processing by SubscriptionsController#index as */*
+  [1m[36mSubscription Load (0.3ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Rendered application/index.html.slim within layouts/application (16.4ms)
+Completed 200 OK in 32ms (Views: 27.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 16:27:21 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 16:27:21 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 16:27:21 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 16:27:21 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:27:23 +0200
+  Processing by SubscriptionsController#new as HTML
+Rendered subscriptions/_form.html.slim (9.4ms)
+Rendered application/new.html.slim within layouts/application (10.8ms)
+Completed 200 OK in 27ms (Views: 21.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:27:23 +0200
+  Processing by SubscriptionsController#new as */*
+Rendered subscriptions/_form.html.slim (9.0ms)
+Rendered application/new.html.slim within layouts/application (10.8ms)
+Completed 200 OK in 24ms (Views: 19.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 16:27:23 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 16:27:23 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 16:27:23 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 16:27:23 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/subscriptions" for 127.0.0.1 at 2011-09-05 16:27:25 +0200
+  Processing by SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r5/KiLvmPGHKRr/eTdFY4y7fkIO+isSKUr3tqbd90MM=", "subscription"=>{"query"=>"asdasd"}, "commit"=>"Crea Sottoscrizione"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'asdasd' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:27:25', 'asdasd', '2011-09-05 14:27:25')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/subscriptions/2
+Completed 302 Found in 31ms
+
+
+Started GET "/subscriptions/2" for 127.0.0.1 at 2011-09-05 16:27:25 +0200
+  Processing by SubscriptionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSubscription Load (0.4ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` WHERE `subscriptions`.`id` = 2 LIMIT 1[0m
+Rendered subscriptions/_resource.html.slim (4.1ms)
+Rendered application/show.html.slim within layouts/application (5.4ms)
+Completed 200 OK in 70ms (Views: 63.3ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/subscriptions/2" for 127.0.0.1 at 2011-09-05 16:27:25 +0200
+  Processing by SubscriptionsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[35mSubscription Load (0.3ms)[0m  SELECT `subscriptions`.* FROM `subscriptions` WHERE `subscriptions`.`id` = 2 LIMIT 1
+Rendered subscriptions/_resource.html.slim (4.3ms)
+Rendered application/show.html.slim within layouts/application (7.1ms)
+Completed 200 OK in 29ms (Views: 23.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 16:27:25 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 16:27:25 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 16:27:25 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 16:27:25 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/subscriptions/2" for 127.0.0.1 at 2011-09-05 16:27:43 +0200
+  Processing by SubscriptionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSubscription Load (0.3ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` WHERE `subscriptions`.`id` = 2 LIMIT 1[0m
+Rendered subscriptions/_resource.html.slim (3.6ms)
+Rendered application/show.html.slim within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 26ms
+
+ActionView::Template::Error (Missing partial subscriptions/flash_messages, application/flash_messages with {:handlers=>[:erb, :builder, :slim, :coffee], :formats=>[:html], :locale=>[:it, :it]}. Searched in:
+  * "/Users/steffoz/dev/visible_tweets/app/views"
+  * "/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/kaminari-0.12.4/app/views"
+):
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   body
+    9:     = render "flash_messages"
+    10:     = yield
+  app/views/layouts/application.html.slim:9:in `_app_views_layouts_application_html_slim__197020137018704174_2153831760'
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.2ms)
+
+
+Started GET "/subscriptions/2" for 127.0.0.1 at 2011-09-05 16:27:44 +0200
+  Processing by SubscriptionsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[35mSubscription Load (0.6ms)[0m  SELECT `subscriptions`.* FROM `subscriptions` WHERE `subscriptions`.`id` = 2 LIMIT 1
+Rendered subscriptions/_resource.html.slim (10.8ms)
+Rendered application/show.html.slim within layouts/application (12.4ms)
+Completed 500 Internal Server Error in 134ms
+
+ActionView::Template::Error (Missing partial subscriptions/flash_messages, application/flash_messages with {:handlers=>[:erb, :builder, :slim, :coffee], :formats=>[:html], :locale=>[:it, :it]}. Searched in:
+  * "/Users/steffoz/dev/visible_tweets/app/views"
+  * "/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/kaminari-0.12.4/app/views"
+):
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   body
+    9:     = render "flash_messages"
+    10:     = yield
+  app/views/layouts/application.html.slim:9:in `_app_views_layouts_application_html_slim__197020137018704174_2153831760'
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (8.8ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.0ms)
+
+
+Started GET "/subscriptions/2" for 127.0.0.1 at 2011-09-05 16:27:54 +0200
+  Processing by SubscriptionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSubscription Load (0.3ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` WHERE `subscriptions`.`id` = 2 LIMIT 1[0m
+Rendered subscriptions/_resource.html.slim (3.7ms)
+Rendered application/show.html.slim (5.1ms)
+Completed 200 OK in 21ms (Views: 15.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/subscriptions/2" for 127.0.0.1 at 2011-09-05 16:27:54 +0200
+  Processing by SubscriptionsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[35mSubscription Load (0.3ms)[0m  SELECT `subscriptions`.* FROM `subscriptions` WHERE `subscriptions`.`id` = 2 LIMIT 1
+Rendered subscriptions/_resource.html.slim (55.8ms)
+Rendered application/show.html.slim (72.5ms)
+Completed 200 OK in 112ms (Views: 103.0ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/subscriptions/2" for 127.0.0.1 at 2011-09-05 16:27:57 +0200
+  Processing by SubscriptionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSubscription Load (0.3ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` WHERE `subscriptions`.`id` = 2 LIMIT 1[0m
+Rendered subscriptions/_resource.html.slim (4.8ms)
+Rendered application/show.html.slim (6.3ms)
+Completed 200 OK in 23ms (Views: 14.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/subscriptions/2" for 127.0.0.1 at 2011-09-05 16:27:57 +0200
+  Processing by SubscriptionsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[35mSubscription Load (0.3ms)[0m  SELECT `subscriptions`.* FROM `subscriptions` WHERE `subscriptions`.`id` = 2 LIMIT 1
+Rendered subscriptions/_resource.html.slim (10.6ms)
+Rendered application/show.html.slim (12.5ms)
+Completed 200 OK in 28ms (Views: 22.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:28:00 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (0.3ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Rendered application/index.html.slim (22.9ms)
+Completed 200 OK in 40ms (Views: 29.5ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:28:00 +0200
+  Processing by SubscriptionsController#index as */*
+  [1m[36mSubscription Load (0.4ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Rendered application/index.html.slim (24.1ms)
+Completed 200 OK in 39ms (Views: 32.0ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:28:02 +0200
+  Processing by SubscriptionsController#new as HTML
+Rendered subscriptions/_form.html.slim (10.2ms)
+Rendered application/new.html.slim (11.5ms)
+Completed 200 OK in 23ms (Views: 19.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:28:02 +0200
+  Processing by SubscriptionsController#new as */*
+Rendered subscriptions/_form.html.slim (81.5ms)
+Rendered application/new.html.slim (82.8ms)
+Completed 200 OK in 167ms (Views: 94.4ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/subscriptions" for 127.0.0.1 at 2011-09-05 16:28:04 +0200
+  Processing by SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r5/KiLvmPGHKRr/eTdFY4y7fkIO+isSKUr3tqbd90MM=", "subscription"=>{"query"=>"aaaa"}, "commit"=>"Crea Sottoscrizione"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'aaaa' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:28:04', 'aaaa', '2011-09-05 14:28:04')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/subscriptions/3
+Completed 302 Found in 21ms
+
+
+Started GET "/subscriptions/3" for 127.0.0.1 at 2011-09-05 16:28:04 +0200
+  Processing by SubscriptionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSubscription Load (0.5ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` WHERE `subscriptions`.`id` = 3 LIMIT 1[0m
+Rendered subscriptions/_resource.html.slim (3.9ms)
+Rendered application/show.html.slim (5.5ms)
+Completed 200 OK in 21ms (Views: 15.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/subscriptions/3" for 127.0.0.1 at 2011-09-05 16:28:05 +0200
+  Processing by SubscriptionsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[35mSubscription Load (0.4ms)[0m  SELECT `subscriptions`.* FROM `subscriptions` WHERE `subscriptions`.`id` = 3 LIMIT 1
+Rendered subscriptions/_resource.html.slim (12.1ms)
+Rendered application/show.html.slim (15.5ms)
+Completed 200 OK in 43ms (Views: 34.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/subscriptions/3" for 127.0.0.1 at 2011-09-05 16:28:32 +0200
+  Processing by SubscriptionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSubscription Load (0.3ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` WHERE `subscriptions`.`id` = 3 LIMIT 1[0m
+Rendered subscriptions/_resource.html.slim (9.4ms)
+Rendered application/show.html.slim within layouts/application (10.9ms)
+Completed 500 Internal Server Error in 39ms
+
+ActionView::Template::Error (Missing partial layout/flash_messages with {:handlers=>[:erb, :builder, :slim, :coffee], :formats=>[:html], :locale=>[:it, :it]}. Searched in:
+  * "/Users/steffoz/dev/visible_tweets/app/views"
+  * "/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/kaminari-0.12.4/app/views"
+):
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   body
+    9:     = render "layout/flash_messages"
+    10:     = yield
+  app/views/layouts/application.html.slim:9:in `_app_views_layouts_application_html_slim__197020137018704174_2158064160'
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.9ms)
+
+
+Started GET "/subscriptions/3" for 127.0.0.1 at 2011-09-05 16:28:32 +0200
+  Processing by SubscriptionsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[35mSubscription Load (0.3ms)[0m  SELECT `subscriptions`.* FROM `subscriptions` WHERE `subscriptions`.`id` = 3 LIMIT 1
+Rendered subscriptions/_resource.html.slim (9.0ms)
+Rendered application/show.html.slim within layouts/application (10.6ms)
+Completed 500 Internal Server Error in 40ms
+
+ActionView::Template::Error (Missing partial layout/flash_messages with {:handlers=>[:erb, :builder, :slim, :coffee], :formats=>[:html], :locale=>[:it, :it]}. Searched in:
+  * "/Users/steffoz/dev/visible_tweets/app/views"
+  * "/Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/kaminari-0.12.4/app/views"
+):
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   body
+    9:     = render "layout/flash_messages"
+    10:     = yield
+  app/views/layouts/application.html.slim:9:in `_app_views_layouts_application_html_slim__197020137018704174_2158064160'
+
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /Users/steffoz/.rvm/gems/ruby-1.9.2-p180@visible_tweets/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (22.4ms)
+
+
+Started GET "/subscriptions/3" for 127.0.0.1 at 2011-09-05 16:28:40 +0200
+  Processing by SubscriptionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSubscription Load (0.4ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` WHERE `subscriptions`.`id` = 3 LIMIT 1[0m
+Rendered subscriptions/_resource.html.slim (3.8ms)
+Rendered application/show.html.slim within layouts/application (5.1ms)
+Rendered layouts/_flash_messages.html.slim (2.3ms)
+Completed 200 OK in 36ms (Views: 30.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/subscriptions/3" for 127.0.0.1 at 2011-09-05 16:28:40 +0200
+  Processing by SubscriptionsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[35mSubscription Load (0.5ms)[0m  SELECT `subscriptions`.* FROM `subscriptions` WHERE `subscriptions`.`id` = 3 LIMIT 1
+Rendered subscriptions/_resource.html.slim (12.7ms)
+Rendered application/show.html.slim within layouts/application (14.2ms)
+Rendered layouts/_flash_messages.html.slim (0.1ms)
+Completed 200 OK in 52ms (Views: 41.0ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 16:28:41 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 16:28:41 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 16:28:41 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 16:28:41 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:28:43 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (0.3ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Rendered application/index.html.slim within layouts/application (19.7ms)
+Rendered layouts/_flash_messages.html.slim (4.0ms)
+Completed 200 OK in 42ms (Views: 36.5ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:28:43 +0200
+  Processing by SubscriptionsController#index as */*
+  [1m[36mSubscription Load (0.4ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (9.0ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Rendered application/index.html.slim within layouts/application (165.3ms)
+Rendered layouts/_flash_messages.html.slim (0.1ms)
+Completed 200 OK in 185ms (Views: 134.8ms | ActiveRecord: 48.9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 16:28:43 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 16:28:43 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 16:28:43 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 16:28:43 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:28:45 +0200
+  Processing by SubscriptionsController#new as HTML
+Rendered subscriptions/_form.html.slim (9.1ms)
+Rendered application/new.html.slim within layouts/application (11.8ms)
+Rendered layouts/_flash_messages.html.slim (0.1ms)
+Completed 200 OK in 27ms (Views: 22.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/subscriptions/new" for 127.0.0.1 at 2011-09-05 16:28:45 +0200
+  Processing by SubscriptionsController#new as */*
+Rendered subscriptions/_form.html.slim (192.5ms)
+Rendered application/new.html.slim within layouts/application (194.1ms)
+Rendered layouts/_flash_messages.html.slim (0.1ms)
+Completed 200 OK in 253ms (Views: 248.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 16:28:46 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 16:28:46 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 16:28:46 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 16:28:46 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/subscriptions" for 127.0.0.1 at 2011-09-05 16:28:48 +0200
+  Processing by SubscriptionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r5/KiLvmPGHKRr/eTdFY4y7fkIO+isSKUr3tqbd90MM=", "subscription"=>{"query"=>"dffd"}, "commit"=>"Crea Sottoscrizione"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM `subscriptions` WHERE `subscriptions`.`query` = BINARY 'dffd' LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `subscriptions` (`created_at`, `query`, `updated_at`) VALUES ('2011-09-05 14:28:48', 'dffd', '2011-09-05 14:28:48')[0m
+  [1m[35m (31.1ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/subscriptions/4
+Completed 302 Found in 55ms
+
+
+Started GET "/subscriptions/4" for 127.0.0.1 at 2011-09-05 16:28:48 +0200
+  Processing by SubscriptionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSubscription Load (0.3ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` WHERE `subscriptions`.`id` = 4 LIMIT 1[0m
+Rendered subscriptions/_resource.html.slim (3.9ms)
+Rendered application/show.html.slim within layouts/application (5.2ms)
+Rendered layouts/_flash_messages.html.slim (0.1ms)
+Completed 200 OK in 23ms (Views: 17.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/subscriptions/4" for 127.0.0.1 at 2011-09-05 16:28:48 +0200
+  Processing by SubscriptionsController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[35mSubscription Load (0.4ms)[0m  SELECT `subscriptions`.* FROM `subscriptions` WHERE `subscriptions`.`id` = 4 LIMIT 1
+Rendered subscriptions/_resource.html.slim (18.0ms)
+Rendered application/show.html.slim within layouts/application (19.9ms)
+Rendered layouts/_flash_messages.html.slim (0.1ms)
+Completed 200 OK in 38ms (Views: 32.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 16:28:48 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 16:28:48 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 16:28:48 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 16:28:48 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/subscriptions/4" for 127.0.0.1 at 2011-09-05 16:29:28 +0200
+  Processing by SubscriptionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSubscription Load (0.4ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` WHERE `subscriptions`.`id` = 4 LIMIT 1[0m
+Rendered subscriptions/_resource.html.slim (4.7ms)
+Rendered application/show.html.slim within layouts/application (6.7ms)
+Compiled application.css  (666ms)  (pid 38364)
+Rendered layouts/_flash_messages.html.slim (0.1ms)
+Completed 200 OK in 748ms (Views: 739.3ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/subscriptions/4" for 127.0.0.1 at 2011-09-05 16:29:29 +0200
+  Processing by SubscriptionsController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[35mSubscription Load (0.4ms)[0m  SELECT `subscriptions`.* FROM `subscriptions` WHERE `subscriptions`.`id` = 4 LIMIT 1
+Rendered subscriptions/_resource.html.slim (6.4ms)
+Rendered application/show.html.slim within layouts/application (8.3ms)
+Rendered layouts/_flash_messages.html.slim (0.1ms)
+Completed 200 OK in 43ms (Views: 35.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 16:29:29 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 16:29:29 +0200
+Served asset /application.css - 200 OK (36ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 16:29:29 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 16:29:29 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:29:33 +0200
+  Processing by SubscriptionsController#index as HTML
+  [1m[36mSubscription Load (0.4ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Rendered application/index.html.slim within layouts/application (49.0ms)
+Rendered layouts/_flash_messages.html.slim (0.1ms)
+Completed 200 OK in 63ms (Views: 57.5ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/subscriptions" for 127.0.0.1 at 2011-09-05 16:29:33 +0200
+  Processing by SubscriptionsController#index as */*
+  [1m[36mSubscription Load (25.4ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `subscriptions` 
+Rendered application/index.html.slim within layouts/application (222.8ms)
+Rendered layouts/_flash_messages.html.slim (0.1ms)
+Completed 200 OK in 242ms (Views: 197.1ms | ActiveRecord: 43.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 16:29:34 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 16:29:34 +0200
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 16:29:34 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 16:29:34 +0200
+Served asset /application.js - 304 Not Modified (21ms)
+
+
+Started GET "/subscriptions/1" for 127.0.0.1 at 2011-09-05 16:29:53 +0200
+  Processing by SubscriptionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubscription Load (0.3ms)[0m  [1mSELECT `subscriptions`.* FROM `subscriptions` WHERE `subscriptions`.`id` = 1 LIMIT 1[0m
+Rendered subscriptions/_resource.html.slim (4.6ms)
+Rendered application/show.html.slim within layouts/application (6.0ms)
+Rendered layouts/_flash_messages.html.slim (0.1ms)
+Completed 200 OK in 21ms (Views: 16.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/subscriptions/1" for 127.0.0.1 at 2011-09-05 16:29:53 +0200
+  Processing by SubscriptionsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[35mSubscription Load (0.3ms)[0m  SELECT `subscriptions`.* FROM `subscriptions` WHERE `subscriptions`.`id` = 1 LIMIT 1
+Rendered subscriptions/_resource.html.slim (25.2ms)
+Rendered application/show.html.slim within layouts/application (38.1ms)
+Rendered layouts/_flash_messages.html.slim (0.1ms)
+Completed 200 OK in 68ms (Views: 58.5ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-05 16:29:53 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-05 16:29:53 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-05 16:29:53 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-05 16:29:53 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
