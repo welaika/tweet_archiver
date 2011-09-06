@@ -1,0 +1,6 @@
+- [:notice, :alert].each do |m|
+  - if flash[m].is_a? String
+    .flash-message(class="#{m}-flash-message")= flash[m]
+  - elsif flash[m].is_a? Array
+    - flash[m].each do |message|
+      .flash-message(class="#{m}-flash-message")= flash[m]

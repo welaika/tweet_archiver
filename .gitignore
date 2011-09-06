@@ -1,0 +1,5 @@
+log/*
+tmp/*
+lib/daemon/twitter_logger.log
+lib/daemon/twitter_logger.output
+lib/active_support.log

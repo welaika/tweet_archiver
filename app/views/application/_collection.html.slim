@@ -1,0 +1,6 @@
+ul
+  - collection.each do |record|
+    li[id=dom_id(record) class=dom_class(record)]
+      = render "resource_row", :resource => record
+
+= paginate collection

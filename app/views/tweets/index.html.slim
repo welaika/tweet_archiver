@@ -1,0 +1,23 @@
+h2
+  | Elenco degli ultimi Tweet per "#{parent.query}"
+  span= link_to "Esporta", "#", :"data-toggle-dom" => "#filter_form"
+
+#filter_form.hidden
+  .dialog
+    h3 Esporta Archivio
+
+    = form_for :filter, :url => export_subscription_tweets_path(parent, :format => :xls), :html => {:method => :get} do |form|
+      .input
+        = form.label :a_partire_da
+        = form.datetime_select :from, :default => 1.month.ago
+      .input
+        = form.label :fino_al
+        = form.datetime_select :to, :default => Time.now
+      = form.submit "Scarica XLS"
+
+= render "collection", :collection => collection
+
+- content_for :title do
+  h1= i18n_index(resource_class)
+  .actions
+    li= link_to "← Elenco Sottoscrizioni", subscriptions_path, :class => "button"
