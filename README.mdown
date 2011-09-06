@@ -16,5 +16,5 @@ Then, start the daemon:
 
     ./lib/daemons/twitter_logger.rb start RAILS_ENV=development
 
-That should be everything. Now head up to localhost:3000, and start adding tweeter search subscriptions!
+That should be everything. Now head up to localhost:3000, and start adding Twitter search subscriptions!
 
