@@ -11,6 +11,9 @@ gem 'responders'
 gem 'kaminari'
 gem 'spreadsheet'
 gem 'simple_form'
+gem 'eventmachine'
+gem 'twitter-stream'
+gem 'daemons'
 
 group :assets do
   gem 'sass-rails', '~> 3.1.0'
@@ -24,7 +27,7 @@ group :test do
   gem 'turn', :require => false
   gem 'blockenspiel'
   gem 'capybara'
-  gem 'spork'
+  gem 'spork', '~> 0.9.0.rc'
   gem 'steak'
   gem 'factory_girl_rails'
   gem 'launchy'

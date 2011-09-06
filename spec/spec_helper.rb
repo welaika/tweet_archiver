@@ -3,15 +3,9 @@ require 'spork'
 
 Spork.prefork do
   ENV["RAILS_ENV"] ||= 'test'
-
   require File.expand_path("../../config/environment", __FILE__)
   require 'rspec/rails'
   require 'capybara/rspec'
-end
-
-Spork.each_run do
-
-  Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
   RSpec.configure do |config|
     config.mock_with :mocha
@@ -39,6 +33,11 @@ Spork.each_run do
   Capybara.javascript_driver = :selenium
   Capybara.default_selector = :css
   Capybara.ignore_hidden_elements = true
+
+end
+
+Spork.each_run do
+  Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 end
 
 

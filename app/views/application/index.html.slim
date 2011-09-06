@@ -1,9 +1,6 @@
-h1= i18n_index(resource_class)
+= render "collection", :collection => collection
 
-ul
-  - collection.each do |record|
-    li[id=dom_id(record) class=dom_class(record)]= link_to record.to_s, url_for(record)
-
-= paginate @subscriptions
-
-= link_to i18n_create(resource_class), new_resource_path, :class => "button"
+- content_for :title do
+  h1= i18n_index(resource_class)
+  .actions
+    li= link_to i18n_create(resource_class), new_resource_path, :class => "create-button" rescue nil

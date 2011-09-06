@@ -11,4 +11,7 @@ module ApplicationHelper
   def i18n_show(resource_class)
     i18n_action :show, resource_class
   end
+  def i18n_destroy(resource_class)
+    i18n_action :destroy, resource_class
+  end
 end

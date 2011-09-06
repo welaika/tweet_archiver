@@ -1,6 +1,6 @@
 class SubscriptionsController < ApplicationController
   inherit_resources
-  actions :all, :except => [:edit, :update]
+  actions :all, :except => [:edit, :update, :show]
 
   protected
 

@@ -1,13 +1,168 @@
 @import 'bourbon'
 @import 'reset'
+@import 'clearfix'
 
-.wrapper
-  width: 400px
+body
+  background: #555
+  font-size: 14px
+  font-family: "Lucida Grande", Verdana, Arial, Helvetica, sans-serif
+  
+  .hidden
+    display: none
+
+.flash-message
+  width: 600px - 20px
   margin: 30px auto
+  +border-radius(5px)
+  +box-shadow(0px 1px 0px 0px gray)
+  background-color: #333
+  padding: 10px
+  color: white
+  font-size: 13px
   
-.button
-  +button
-  text-decoration: none
+.wrapper
+  background-color: white
+  width: 600px
+  margin: 30px auto
+  +border-radius(5px)
+  +box-shadow(0px 1px 3px 1px black)
   
-  &:visited, &:hover
-    color: white
+  .title
+    padding: 10px 20px
+    background-color: #888
+    +border-radius(5px 5px 0px 0px)
+    +clearfix
+    
+    h1
+      margin: 0px
+      font-size: 24px
+      line-height: 35px
+      color: #222
+      text-shadow: 0px 1px 0px #ccc
+      float: left
+      width: 50%
+      font-family: Amaranth, "Lucida Grande", Verdana, Arial, Helvetica, sans-serif
+      
+    .actions
+      float: right
+      width: 50%
+      margin: 0px
+      padding: 0px
+      text-shadow: 0px -1px 0px #777
+      font-size: 12px
+      line-height: 35px
+      
+      a
+        color: white
+        
+      li
+        float: right
+        list-style-type: none
+        padding: 0px
+        margin: 0
+        margin-left: 10px
+        
+      input.delete
+        +button(red)
+      
+      .create-button
+        +button(green)
+        text-decoration: none
+        
+      .button
+        +button
+        text-decoration: none
+        
+        &:visited, &:hover
+          color: white
+      
+    
+  .content
+    +border-radius(0px 0px 5px 5px)
+    padding: 10px 20px
+    +clearfix
+    
+    input[type="submit"]
+      +button
+
+    h2
+      font-family: Amaranth, "Lucida Grande", Verdana, Arial, Helvetica, sans-serif
+      font-size: 20px
+      color: #333
+      margin-bottom: 20px
+      margin-top: 15px
+      
+      span a
+        padding-left: 5px
+        font-size: 15px
+        color: #555
+    
+    a
+      color: #106490
+    
+    ul
+      margin: 0px
+      margin-bottom: 10px
+      
+      li
+        margin-bottom: 4px
+        
+        span
+          color: #777
+          padding-left: 2px
+          font-size: 11px
+          
+      .subscription
+        a
+          font-weight: bold
+        
+          
+    .dialog
+      background-color: #DFEDF6
+      margin-bottom: 20px
+      padding: 15px
+      +border-radius(5px)
+      +box-shadow(0px 1px 2px 0px rgba(0,0,0,0.4))
+      font-size: 12px
+      
+      h3
+        color: #083A54
+        font-family: Amaranth, "Lucida Grande", Verdana, Arial, Helvetica, sans-serif
+        font-size: 20px
+        margin-bottom: 10px
+      
+      .input
+        margin-bottom: 5px
+      
+      label
+        width: 80px
+        display: inline-block
+        
+    .tweet
+      margin-bottom: 15px
+      padding-bottom: 15px
+      border-bottom: 1px dashed #999
+      list-style-type: none
+      position: relative
+      min-height: 48px
+      
+      img
+        position: absolute
+        top: 0px
+        left: 0px
+        
+      .content
+        padding: 0px
+        padding-left: 60px
+        
+        .text
+          font-size: 12px
+          margin-bottom: 10px
+          
+        .user, .time
+          text-align: right
+          font-size: 10px
+          color: #444
+          
+        .user:before
+          :content "@"

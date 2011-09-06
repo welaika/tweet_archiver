@@ -1,4 +1,4 @@
-ul
-  li
-    strong Hashtag:
-    = resource.query
+h2 Ultimi Tweet registrati per "#{resource.query}":
+
+= paginate @tweets
+

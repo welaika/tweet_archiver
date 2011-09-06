@@ -20,6 +20,7 @@ it:
     update: 'Modifica %{model}'
     show: 'Dettagli %{model}'
     index: "Elenco %{model}"
+    destroy: "Elimina %{model}"
 
   number:
     format:
@@ -201,6 +202,7 @@ it:
   activerecord:
     models:
       subscription: "Sottoscrizione"
+      tweet: "Tweet"
 
     attributes: &model_attributes
       subscription:

@@ -11,12 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110905125807) do
+ActiveRecord::Schema.define(:version => 20110905144804) do
 
   create_table "subscriptions", :force => true do |t|
     t.string   "query"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "tweets", :force => true do |t|
+    t.string   "from_user"
+    t.string   "profile_image_url"
+    t.text     "text"
+    t.datetime "posted_at"
+    t.integer  "subscription_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tweets", ["subscription_id"], :name => "index_tweets_on_subscription_id"
 
 end
