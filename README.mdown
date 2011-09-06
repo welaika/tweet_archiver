@@ -1,5 +1,7 @@
 # Tweet Archiver
 
+!["Tweet Archiver Screenshot"](http://o7.no/oyrStu)
+
 ## What's that?
 
 A Rails 3.1 app + EventMachine daemon that uses the Twitter Streaming API to continuously fetch and save tweets under certain criteria.
