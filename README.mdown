@@ -1,6 +1,6 @@
 # Tweet Archiver
 
-!["Tweet Archiver Screenshot"](http://o7.no/oyrStu)
+!["Tweet Archiver Screenshot"](http://dl.dropbox.com/u/8835321/Screenshots/tweet_archiver.png)
 
 ## What's that?
 
