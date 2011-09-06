@@ -1,0 +1,20 @@
+# Tweet Archiver
+
+## What's that?
+
+A Rails 3.1 app + EventMachine daemon that uses the Twitter Streaming API to continuously fetch and save tweets under certain criteria.
+
+## Installation
+
+Just like any Rails 3.x app:
+
+    bundle install
+    rake db:migrate
+    rails server
+
+Then, start the daemon:
+
+    ./lib/daemons/twitter_logger.rb start RAILS_ENV=development
+
+That should be everything. Now head up to localhost:3000, and start adding tweeter search subscriptions!
+
