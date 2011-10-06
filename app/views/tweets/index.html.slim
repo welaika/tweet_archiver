@@ -20,4 +20,6 @@ h2
 - content_for :title do
   h1= i18n_index(resource_class)
   .actions
+    li= button_to "Elimina", parent_path, :method => :delete, :class => "delete", :confirm => "Confermi l'eliminazione?"
     li= link_to "← Elenco Sottoscrizioni", subscriptions_path, :class => "button"
+

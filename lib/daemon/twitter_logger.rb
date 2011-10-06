@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-ENV['RAILS_ENV'] = "production"
+ENV['RAILS_ENV'] = "development"
 
 ARGV.each do |arg|
   if arg.include?('=')
@@ -31,7 +31,8 @@ class TwitterLogger
             :path    => '/1/statuses/filter.json',
             :auth    => 'steffoz:maglione',
             :method  => 'POST',
-            :content => "track=#{terms}"
+            :content => "track=#{terms}",
+            :ssl => true
           )
           @current_logger.each_item do |item|
             tweet = Tweet.initialize_from_api(item)
